@@ -4,6 +4,8 @@
 2. Open command line
 3. Go to root folder 
 	```cd EagleViewVis```
-4. Start application
+4. Install node dependencies
+	```npm install```
+5. Start application
 	```npm start```
-5. In browser, go to http://localhost:3000/eagleview.html
+6. In browser, go to http://localhost:3000/eagleview.html
