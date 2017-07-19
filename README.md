@@ -1,6 +1,6 @@
 # EagleViewVis
 ## To install
-1. Download [node.js v6.11.x LTS](https://nodejs.org/en/download/) for your platform
+1. Download and install [node.js v6.11.x LTS](https://nodejs.org/en/download/) for your platform
 2. Open command line
 3. Go to root folder 
 	```cd EagleViewVis```
