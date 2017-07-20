@@ -77,11 +77,19 @@
     		<div class="row">
 	          	<form id="preferences">
 	          		<h4>Overlay</h4>
-          				<div class="checkbox">
-						  <label>
-						    <input type="checkbox" id="videoOverylayCheckbox">Show background video
-						  </label>
+      				<div class="row checkbox">
+					  <label>
+					    <input type="checkbox" id="videoOverylayCheckbox">Show background video
+					  </label>
+					</div>
+	          		<div class="row">
+						<div class="col-lg-6" style="padding-left:35px">
+							Opacity: <span id="opacityLabel">100</span>%
 						</div>
+						<div class="col-lg-6">
+			          		<input id="backgroundOpacitySlider" type="text" data-slider-step="5">
+		          		</div>
+					</div>
 						<!--
           				<div class="checkbox">
 						  <label>

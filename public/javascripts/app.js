@@ -612,6 +612,18 @@ function initUI(frames){
     color: '#c1c1c1',
     wheelStep: 5
   });
+
+  var slideOpacity = function(){
+    $('#opacityLabel').text($('#backgroundOpacitySlider').val());
+    $('#videoOverlay').css('opacity', $('#backgroundOpacitySlider').val()/100)
+  };
+  $("#backgroundOpacitySlider").slider({ 
+    id: 'backgroundOpacitySliderCss', 
+    min: 0, 
+    max: 100, 
+    value: 100})
+  .on('slide', slideOpacity)
+  .on('slideStop', slideOpacity);
 }
 function initSummaryView(frames){
   var slidingHeatMap = function(){
