@@ -1,6 +1,4 @@
 # Ignore list for Eagle, a PCB layout tool
 
-*.mp4
-
 /node_modules
 npm-debug.log
