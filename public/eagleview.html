@@ -33,10 +33,10 @@
 			            <source src="videos/200_top_small_grey.mp4" type="video/mp4">
 			          	Your browser does not support the video tag.
 			        </video>
-			        <video width="512" height="424" id="videoOverlay2" >
+			        <!--<video width="512" height="424" id="videoOverlay2" >
 			            <source src="videos/200_eagle.mp4" type="video/mp4">
 			          	Your browser does not support the video tag.
-			        </video>
+			        </video>-->
 		          	<canvas id="easel" width="512" height="424"></canvas>
 		          	<canvas id="traceOverlay" width="511" height="423"></canvas>
 		          	<div id="overlay"></div>
@@ -82,9 +82,15 @@
 						    <input type="checkbox" id="videoOverylayCheckbox">Show background video
 						  </label>
 						</div>
+						<!--
           				<div class="checkbox">
 						  <label>
 						    <input type="checkbox" id="videoOverylayCheckbox2">Show background proxemic video
+						  </label>
+						</div>-->
+          				<div class="checkbox">
+						  <label>
+						    <input type="checkbox" id="zoneOverlayCheckbox">Show zones
 						  </label>
 						</div>
 		            <h4>Distance</h4>
@@ -103,7 +109,7 @@
 		            <div class="row">
 		              <div class="col-sm-4">Show distance line between</div>
 		              <div class="col-sm-4">
-		                <select class="form-control" id="distanceLine1From">
+		                <select class="form-control selectDistanceLine" id="distanceLine1From" data-id="0" data-type="from">
 		                  <option value="select">Select</option>
 		                  <option value="0" type="person">Person 1</option>
 		                  <option value="1" type="person">Person 2</option>
@@ -112,7 +118,49 @@
 		                </select>
 		              </div>
 		              <div class="col-sm-4">
-		                <select class="form-control" id="distanceLine1To">
+		                <select class="form-control selectDistanceLine" id="distanceLine1To" data-id="0" data-type="to">
+		                  <option value="select">Select</option>
+		                  <option value="0" type="person">Person 1</option>
+		                  <option value="1" type="person">Person 2</option>
+		                  <option value="2" type="person">Person 3</option>
+		                  <option value="100" type="object">TV</option>
+		                </select>
+		              </div>
+		            </div>
+		            <div class="row" id="distanceLine2">
+		              <div class="col-sm-4">Show distance line between</div>
+		              <div class="col-sm-4">
+		                <select class="form-control selectDistanceLine" id="distanceLine2From" data-id="1" data-type="from">
+		                  <option value="select">Select</option>
+		                  <option value="0" type="person">Person 1</option>
+		                  <option value="1" type="person">Person 2</option>
+		                  <option value="2" type="person">Person 3</option>
+		                  <option value="100" type="object">TV</option>
+		                </select>
+		              </div>
+		              <div class="col-sm-4">
+		                <select class="form-control selectDistanceLine" id="distanceLine2To" data-id="1" data-type="to">
+		                  <option value="select">Select</option>
+		                  <option value="0" type="person">Person 1</option>
+		                  <option value="1" type="person">Person 2</option>
+		                  <option value="2" type="person">Person 3</option>
+		                  <option value="100" type="object">TV</option>
+		                </select>
+		              </div>
+		            </div>
+		            <div class="row" id="distanceLine3">
+		              <div class="col-sm-4">Show distance line between</div>
+		              <div class="col-sm-4">
+		                <select class="form-control selectDistanceLine" id="distanceLine3From" data-id="2" data-type="from">
+		                  <option value="select">Select</option>
+		                  <option value="0" type="person">Person 1</option>
+		                  <option value="1" type="person">Person 2</option>
+		                  <option value="2" type="person">Person 3</option>
+		                  <option value="100" type="object">TV</option>
+		                </select>
+		              </div>
+		              <div class="col-sm-4">
+		                <select class="form-control selectDistanceLine" id="distanceLine3To" data-id="2" data-type="to">
 		                  <option value="select">Select</option>
 		                  <option value="0" type="person">Person 1</option>
 		                  <option value="1" type="person">Person 2</option>

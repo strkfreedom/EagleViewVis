@@ -20,7 +20,7 @@ var groupConfig = [ {r:125, g:0, b:0},
                     {r:158, g:20, b:119}, 
                     {r:212, g:175, b:55}
                   ];
-var preferences = {drawLine:[null, null, null]}; //{drawLine:[{from:{type:"person", id:0}, to:{type:"person", id:1}}]};
+var preferences = {drawLine:[], showZones:false}; //{drawLine:[{from:{type:"person", id:0}, to:{type:"person", id:1}}]};
 var canvas, margin, stage;
 var mode = "run";
 var debugFrame = 404;
@@ -31,6 +31,7 @@ var currentTime = 0;
 var playFirstFrame = false;
 var video1;
 var heatmapData, maxHeatMapValue, activeHeatMapPersonId = null, activeTracePersonId = null;
+const HAVE_ENOUGH_DATA = 4;
 
 function loadData(step) {
   eraseCookie('config');
@@ -138,10 +139,10 @@ function init(data) {
       }
 
       //console.log(playbackStatus, currentFrame, currentTime, frames[currentFrame].localTime)
-      if(playbackStatus == 'pause') {
+      if(playbackStatus == 'pause' || playbackStatus == 'waitingToPlay') {
         // no change to current frame
       }
-      else if(playbackStatus == 'seeking' || playbackStatus == 'seeked') {
+      else if(playbackStatus == 'playAndSeeking' || playbackStatus == 'pauseAndSeeking') {
         // change current frame
         currentFrame = 0;
         while(frames[currentFrame].localTime < currentTime){
@@ -168,9 +169,10 @@ function init(data) {
       //stage.addChild(drawFixedObject(1, "couch", 200,350,300,100,0));
       //stage.addChild(drawZone(frames[currentFrame].persons, "arc", "Touch Zone", 100, 40, 200, 100, {r:220, g:20, b:60}, 0));
       //stage.addChild(drawZone(frames[currentFrame].persons, "rectangle", "Interact", 100, 220, 400, 200, {r:220, g:20, b:60}, 0));
-      stage.addChild(drawZone(frames[currentFrame].persons, "rectangle", "<1.2m", 100, 120, 400, 300, {r:220, g:20, b:60}, 0));
-      stage.addChild(drawZone(frames[currentFrame].persons, "rectangle", "1.2-1.5m", 100, 45, 400, 75, {r:34, g:139, b:34}, 0));
-
+      if(preferences.showZones == true) {
+        stage.addChild(drawZone(frames[currentFrame].persons, "rectangle", "<1.2m", 100, 120, 400, 300, {r:220, g:20, b:60}, 0));
+        stage.addChild(drawZone(frames[currentFrame].persons, "rectangle", "1.2-1.5m", 100, 45, 400, 75, {r:34, g:139, b:34}, 0));        
+      }
       var currentFrameInteractiveObjects = [];
       for(var i=0; i<frames[currentFrame].interactiveObjects.length; i++){
         currentFrameInteractiveObjects.push(frames[currentFrame].interactiveObjects[i]);
@@ -191,21 +193,21 @@ function init(data) {
         }
       }
       for(var i=0; i<preferences.drawLine.length; i++){
-        if(!preferences.drawLine[i] || !preferences.drawLine[i].from || !preferences.drawLine[i].to) break;
+        if(!preferences.drawLine[i] || !preferences.drawLine[i].from || !preferences.drawLine[i].to) continue;
         var o1, o2;
         var from = preferences.drawLine[i].from;
         var to = preferences.drawLine[i].to;
-        console.log(from.id, to.id)
+        //console.log(from.id, to.id)
         if(from.type == 'person'){
           if(frames[currentFrame].persons[from.id].isInMap == true) o1 = frames[currentFrame].persons[from.id].person;
-          else break;
+          else continue;
         } else {
           o1 = currentFrameInteractiveObjects[from.id];
         }
 
         if(to.type == 'person'){
           if(frames[currentFrame].persons[to.id].isInMap == true) o2 = frames[currentFrame].persons[to.id].person;
-          else break;
+          else continue;
         } else {
           o2 = currentFrameInteractiveObjects[to.id];
         }
@@ -336,6 +338,64 @@ function onFormInputUpdated(returnFunction){
       appConfig.forwardMovementSeconds = $(this).val();
       return;
     }
+    else if($(this).hasClass('selectDistanceLine')){
+      var index = parseInt($(this).attr('data-id'));
+      var type = $(this).attr('data-type');
+      var pair;
+      //console.log(index, type);
+
+      if(type == 'from'){
+        pair = '#distanceLine'+(index+1)+'To';
+      } else {
+        pair = '#distanceLine'+(index+1)+'From';
+      }
+
+      if($(this).val() != 'select' && $(pair).val() != 'select' && $(this).val() != $(pair).val()){
+        while(preferences.drawLine.length < index+1){
+          preferences.drawLine.push({from:{type:null, id:null}, to:{type:null, id:null}});
+        }
+        if(type == 'from'){
+          if($(this).val() < 100){
+            // person
+            preferences.drawLine[index].from.type = "person";
+            preferences.drawLine[index].from.id = $(this).val();
+          } else {
+          // object
+            preferences.drawLine[index].from.type = "object";
+            preferences.drawLine[index].from.id = $(this).val()-100;
+          }
+          if($(pair).val() < 100){
+            // person
+            preferences.drawLine[index].to.type = "person";
+            preferences.drawLine[index].to.id = $(pair).val();
+          } else {
+          // object
+            preferences.drawLine[index].to.type = "object";
+            preferences.drawLine[index].to.id = $(pair).val()-100;
+          }
+        } else {
+          if($(this).val() < 100){
+            // person
+            preferences.drawLine[index].to.type = "person";
+            preferences.drawLine[index].to.id = $(this).val();
+          } else {
+          // object
+            preferences.drawLine[index].to.type = "object";
+            preferences.drawLine[index].to.id = $(this).val()-100;
+          }
+          if($(pair).val() < 100){
+            // person
+            preferences.drawLine[index].from.type = "person";
+            preferences.drawLine[index].from.id = $(pair).val();
+          } else {
+          // object
+            preferences.drawLine[index].from.type = "object";
+            preferences.drawLine[index].from.id = $(pair).val()-100;
+          }
+        }
+      }
+    }
+    /*
     else if($(this).attr('id') == 'distanceLine1From'){
       //console.log($(this).val());
       //console.log($('#distanceLine1To').val());
@@ -403,7 +463,76 @@ function onFormInputUpdated(returnFunction){
       }
       //console.log(preferences)
       return;
+    }*/
+    /*
+    else if($(this).attr('id') == 'distanceLine2From'){
+      //console.log($(this).val());
+      //console.log($('#distanceLine1To').val());
+      if($(this).val() != 'select' && $('#distanceLine2To').val() != 'select' && $(this).val() != $('#distanceLine2To').val()){
+        if(preferences.drawLine.length<2) {
+          preferences.drawLine.push({from:{type:null, id:null}, to:{type:null, id:null}});
+        } else if(!preferences.drawLine[1]) {
+          preferences.drawLine[1] = {from:{type:null, id:null}, to:{type:null, id:null}};
+        }
+        if($(this).val() < 100) {
+          // person
+          preferences.drawLine[1].from.type = "person";
+          preferences.drawLine[1].from.id = $(this).val();
+        } else {
+          // object
+          preferences.drawLine[1].from.type = "object";
+          preferences.drawLine[1].from.id = $(this).val()-100;
+        }
+
+        if($('#distanceLine2To').val() < 100) {
+          // person
+          preferences.drawLine[1].to.type = "person";
+          preferences.drawLine[1].to.id = $('#distanceLine2To').val();
+        } else {
+          // object
+          preferences.drawLine[1].to.type = "object";
+          preferences.drawLine[1].to.id = $('#distanceLine2To').val()-100;
+        }
+      } else {
+        // remove first object from array
+        preferences.drawLine[1] = null;
+      }
+      //console.log(preferences)
+      return;
     }
+    else if($(this).attr('id') == 'distanceLine2To'){
+      if($(this).val() != 'select' && $('#distanceLine2From').val() != 'select' && $(this).val() != $('#distanceLine2From').val()){
+        if(preferences.drawLine.length<1) {
+          preferences.drawLine.push({from:{type:null, id:null}, to:{type:null, id:null}});
+        } else if(!preferences.drawLine[1]) {
+          preferences.drawLine[1] = {from:{type:null, id:null}, to:{type:null, id:null}};
+        }
+        if($(this).val() < 100) {
+          // person
+          preferences.drawLine[1].to.type = "person";
+          preferences.drawLine[1].to.id = $(this).val();
+        } else {
+          // object
+          preferences.drawLine[1].to.type = "object";
+          preferences.drawLine[1].to.id = $(this).val()-100;
+        }
+
+        if($('#distanceLine2From').val() < 100) {
+          // person
+          preferences.drawLine[1].from.type = "person";
+          preferences.drawLine[1].from.id = $('#distanceLine2From').val();
+        } else {
+          // object
+          preferences.drawLine[1].from.type = "object";
+          preferences.drawLine[1].from.id = $('#distanceLine2From').val()-100;
+        }
+      } else {
+        // remove first object from array
+        preferences.drawLine[0] = null;
+      }
+      //console.log(preferences)
+      return;
+    }*/
     
     else if($(this).attr('id') == 'person1BackwardMovementColor'){
       personConfig[0].movementColor.backward = hexToRgb( $(this).val());
@@ -586,24 +715,27 @@ function initUI(frames){
   });
 }
 function initVideo(){
+    var enableLogEvent = false;
     video1 = document.getElementById('video1');
     video2 = document.getElementById('video2');
     video3 = document.getElementById('video3');
     video4 = document.getElementById('video4');
     videoOverlay = document.getElementById('videoOverlay');
-    videoOverlay2 = document.getElementById('videoOverlay2');
+    var videos = [video1, video2, video3, video4, videoOverlay];
+    //videoOverlay2 = document.getElementById('videoOverlay2');
     $('#videoOverlay').hide();
-    $('#videoOverlay2').hide();
+    //$('#videoOverlay2').hide();
     $('#videoOverylayCheckbox').on('click', function(){
     	if($(this).is(':checked')){
     		$('#videoOverlay').show();
-        $('#videoOverlay2').hide();
+        //$('#videoOverlay2').hide();
         $('#videoOverylayCheckbox2').prop('checked', false);
     	} else {
     		$('#videoOverlay').hide();
-        $('#videoOverlay2').hide();
+        //$('#videoOverlay2').hide();
     	}
-    })
+    });
+    /*
     $('#videoOverylayCheckbox2').on('click', function(){
       if($(this).is(':checked')){
         $('#videoOverlay2').show();
@@ -613,48 +745,87 @@ function initVideo(){
         $('#videoOverlay').hide();
         $('#videoOverlay2').hide();
       }
-    })
+    });*/
+    $('#zoneOverlayCheckbox').on('click', function(){
+      if($(this).is(':checked')){
+        preferences.showZones = true;
+      } else {
+        preferences.showZones = false;
+      }
+    });
 
-    video1.addEventListener('play', function() {
-        playbackStatus = 'play';
-        video2.play();
-        video3.play();
-        video4.play();
-        videoOverlay.play();
-        videoOverlay2.play();
-    }, false);
-    video1.addEventListener('pause', function() {
-        playbackStatus = 'pause';
+    canPlay = function(){
+      var allCanPlay = true;
+      videos.forEach(function(video){
+        if(video.readyState != HAVE_ENOUGH_DATA){
+          allCanPlay = false
+        }
+      });
+      if(allCanPlay == true) return true;
+      else return false;
+    }
+    handlePlayEvent = function(){
+        if(enableLogEvent) console.log('play')
+      /*
+        videos.forEach(function(video){
+          console.log(video.readyState, canPlay)
+        });*/
+        if(canPlay() == false) {
+          playbackStatus = 'waitingToPlay';
+          video1.pause();
+        } else {
+          playbackStatus = 'play';
+          video2.play();
+          video3.play();
+          video4.play();
+          videoOverlay.play();
+        }
+        //videoOverlay2.play();
+    }
+    handlePauseEvent = function(){
+        if(playbackStatus == 'waitingToPlay') {
+          if(enableLogEvent) console.log('waiting to play')
+        } else {
+          playbackStatus = 'pause';
+          if(enableLogEvent) console.log('pause')
+        }
         video2.pause();
         video3.pause();
         video4.pause();
         videoOverlay.pause();
-        videoOverlay2.pause();
-    }, false);
-    video1.addEventListener('seeking', function(){
-        playbackStatus = 'seeking';
+        //videoOverlay2.pause();
+    }
+    handleSeekEvent = function(){
+        if(playbackStatus == 'play' || playbackStatus == 'waitingToPlay' || playbackStatus == 'playAndSeeking'){
+          if(enableLogEvent) console.log('play and seeking');
+          playbackStatus = 'playAndSeeking';
+        }
+        else{
+          if(enableLogEvent) console.log('pause and seeking');
+          playbackStatus = 'pauseAndSeeking';
+        }
         video2.currentTime = video1.currentTime;
         video3.currentTime = video1.currentTime;
         video4.currentTime = video1.currentTime;
         videoOverlay.currentTime = video1.currentTime;
-        videoOverlay2.currentTime = video1.currentTime;
+        //videoOverlay2.currentTime = video1.currentTime;
         currentTime = parseInt(video1.currentTime*1000);
         if(currentTime == 0) playFirstFrame = false;
-    }, false);
-    video1.addEventListener('seeked', function(){
-        playbackStatus = 'seeked';
-        video2.currentTime = video1.currentTime;
-        video3.currentTime = video1.currentTime;
-        video4.currentTime = video1.currentTime;
-        videoOverlay.currentTime = video1.currentTime;
-        videoOverlay2.currentTime = video1.currentTime;
-        currentTime = parseInt(video1.currentTime*1000);
-        if(currentTime == 0) playFirstFrame = false;
-        // sync
-    }, false);
-    video1.addEventListener('playing', function(){
-        playbackStatus = 'play';
-    }, false);
+    }
+    playVideoIfAllVideoReady = function(){
+      if( (playbackStatus == 'waitingToPlay' || playbackStatus == 'playAndSeeking') && canPlay()){
+        video1.play();
+      }
+    }
+    video1.addEventListener('playing', handlePlayEvent, false);
+    video1.addEventListener('play', handlePlayEvent, false);
+    video1.addEventListener('pause', handlePauseEvent, false);
+    video1.addEventListener('seeking', handleSeekEvent, false);
+    video1.addEventListener('seeked', handleSeekEvent, false);
+    videos.forEach(function(video){
+      video.addEventListener('canplay', playVideoIfAllVideoReady);
+    });
+
 }
 function drawTraceOverlay(frames, divId, personId, startTime, endTime){
   traceOverlayCanvas = new createjs.Stage(divId);
@@ -1251,7 +1422,6 @@ function drawOverviewMovement(frames, personId, startFrame, endFrame, rgb1, rgb2
   mo.type = "movement";
   mo.fixed = false;
 
-  console.log(rgb1, rgb2)
   // draw from latest frame to older frames
   //console.log('frame', processFrame, frames[processFrame]);
   while(processFrame+1 < frames.length && processFrame < endFrame){
