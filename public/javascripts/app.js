@@ -30,7 +30,7 @@ var currentFrame = 0;
 var currentTime = 0;
 var playFirstFrame = false;
 var video1;
-var heatmapData, maxHeatMapValue, activeHeatMapPersonId = null, activeTracePersonId = null;
+var heatmapData, maxHeatMapValue, activeHeatMapPersonIds = [], activeTracePersonIds = [];
 const HAVE_ENOUGH_DATA = 4;
 
 function loadData(step) {
@@ -114,7 +114,9 @@ function init(data) {
     initVideo();
     $('#video1').on('loadedmetadata', function(){
       initUI(frames);
+      initSummaryView(frames);
 
+/*
       var timeValues = $('#positionHeatMapSlider').val().split(',');
       //console.log(timeValues)
       drawHeatmap(frames, 'heatSample', 0, timeValues[0], timeValues[1]);
@@ -122,11 +124,10 @@ function init(data) {
       drawHeatmap(frames, 'heatSample3', 2, timeValues[0], timeValues[1]);
       //©drawHeatmap(frames, 'heatSample4', 3, timeValues[0], timeValues[1]);
       //drawHeatmap(frames, 'overlay', 0, timeValues[0], timeValues[1]);
-      //activeHeatMapPersonId = 0;
 
       drawTraceOverlay(frames, 'traceSample1', 0, 0, 93);
       drawTraceOverlay(frames, 'traceSample2', 1, 0, 93);
-      drawTraceOverlay(frames, 'traceSample3', 2, 0, 93);
+      drawTraceOverlay(frames, 'traceSample3', 2, 0, 93);*/
       $('#loadingIcon').remove();
     })
 
@@ -606,6 +607,13 @@ function initUI(frames){
     $('#preferences').hide();
   });
 
+  $('.panel').slimScroll({
+    height: '720px',
+    color: '#c1c1c1',
+    wheelStep: 5
+  });
+}
+function initSummaryView(frames){
   var slidingHeatMap = function(){
     setHeatMapLabel();
     updateHeatMapPreview();
@@ -616,103 +624,98 @@ function initUI(frames){
     updateHeatMapPreview();
     updateTracePreview();
   };
-  var setHeatMapLabel = function(start, end){
-    if(start != null && end != null) {
-      $('#heatmapStartTime').text(getTimeString(start));
-      $('#heatmapEndTime').text(getTimeString(end));
-    } else {
-      var timeValues = $('#positionHeatMapSlider').val().split(',');
-      $('#heatmapStartTime').text(getTimeString(timeValues[0]));
-      $('#heatmapEndTime').text(getTimeString(timeValues[1]));
-    }
-  };
-  var updateHeatMapPreview = function(){
-    $('#heatSample').html('');
-    $('#heatSample2').html('');
-    $('#heatSample3').html('');
-    $('#heatSample4').html('');
-    $('#overlay').html('');
 
-    var timeValues = $('#positionHeatMapSlider').val().split(',');
-    if(activeHeatMapPersonId != null) 
-      drawHeatmap(frames, 'overlay', activeHeatMapPersonId, timeValues[0], timeValues[1]);
-    $('.overviewImage').each(function(){
-      drawHeatmap(frames, $(this).attr('id'), $(this).parent().attr('data-person-id'), timeValues[0], timeValues[1]);
-    })
-  }
-  var updateTracePreview = function(){
-    var timeValues = $('#positionHeatMapSlider').val().split(',');
-    if(activeTracePersonId != null) 
-      drawTraceOverlay(frames, 'traceOverlay', activeTracePersonId, timeValues[0], timeValues[1]);
-    $('.traceImage').each(function(){
-      drawTraceOverlay(frames, $(this).attr('id'), $(this).parent().attr('data-person-id'), timeValues[0], timeValues[1]);
-    })
-  }
-  setHeatMapLabel(0, Math.floor(video1.duration));
-  $("#positionHeatMapSlider").slider({ 
-    id: 'positionHeatMapSliderCss', 
-    min: 0, 
-    max: Math.floor(video1.duration), 
-    value: [0, Math.floor(video1.duration)]})
-  .on('slide', slidingHeatMap)
-  .on('slideStop', stopSlidingHeatMap);
-
-  $('.overview').click(function(){
-    // deactivate click
-    if($(this).children('.overviewImage').hasClass('active')){
-      $('.overviewImage.active, .overviewText.active').each(function(){
-        $(this).removeClass('active');
-      });
-
+  // heat map events 
+    var setHeatMapLabel = function(start, end){
+      if(start != null && end != null) {
+        $('#heatmapStartTime').text(getTimeString(start));
+        $('#heatmapEndTime').text(getTimeString(end));
+      } else {
+        var timeValues = $('#positionHeatMapSlider').val().split(',');
+        $('#heatmapStartTime').text(getTimeString(timeValues[0]));
+        $('#heatmapEndTime').text(getTimeString(timeValues[1]));
+      }
+    };
+    var updateHeatMapPreview = function(){
+      $('#heatSample').html('');
+      $('#heatSample2').html('');
+      $('#heatSample3').html('');
+      $('#heatSample4').html('');
       $('#overlay').html('');
-      activeHeatMapPersonId = null;
-    } 
-    // activate click
-    else {
-      $('.overviewImage.active, .overviewText.active').each(function(){
-        $(this).removeClass('active');
-      });
-
-      $(this).children('.overviewImage').addClass('active');
-      $(this).children('.overviewText').addClass('active');
 
       var timeValues = $('#positionHeatMapSlider').val().split(',');
+      refreshMainHeatmap();
+      $('.overviewImage').each(function(){
+        drawHeatmap(frames, $(this).attr('id'), $(this).parent().attr('data-person-id'), timeValues[0], timeValues[1]);
+      })
+    }
+    var refreshMainHeatmap = function(){
       $('#overlay').html('');
-      drawHeatmap(frames, 'overlay', $(this).attr('data-person-id'), timeValues[0], timeValues[1]);
-      activeHeatMapPersonId = $(this).attr('data-person-id');
+      for(var i=0; i<activeHeatMapPersonIds.length; i++){
+        var timeValues = $('#positionHeatMapSlider').val().split(',');
+        drawHeatmap(frames, 'overlay', activeHeatMapPersonIds[i], timeValues[0], timeValues[1]);
+      }
     }
-  });
-  $('.trace').click(function(){
-    // deactivate click
-    if($(this).children('.traceImage').hasClass('active')){
-      $('.traceImage.active, .traceText.active').each(function(){
-        $(this).removeClass('active');
-      });
 
-      $('#traceOverlay').hide();
-      activeTracePersonId = null;
-    }
-    // activate click
-    else {
-      $('.traceImage.active, .traceText.active').each(function(){
-        $(this).removeClass('active');
-      });
-
-      $(this).children('.traceImage').addClass('active');
-      $(this).children('.traceText').addClass('active');
-
+    setHeatMapLabel(0, Math.floor(video1.duration));
+    $("#positionHeatMapSlider").slider({ 
+      id: 'positionHeatMapSliderCss', 
+      min: 0, 
+      max: Math.floor(video1.duration), 
+      value: [0, Math.floor(video1.duration)]})
+    .on('slide', slidingHeatMap)
+    .on('slideStop', stopSlidingHeatMap);
+    $('.overview').click(function(){
+      // deactivate click
+      if($(this).children('.overviewImage').hasClass('active')){
+        $(this).children('.overviewImage').removeClass('active');
+        $(this).children('.overviewText').removeClass('active');
+        activeHeatMapPersonIds = activeHeatMapPersonIds.remove($(this).attr('data-person-id'));
+        refreshMainHeatmap();
+      } 
+      // activate click
+      else {
+        $(this).children('.overviewImage').addClass('active');
+        $(this).children('.overviewText').addClass('active');
+        activeHeatMapPersonIds.push($(this).attr('data-person-id'));
+        refreshMainHeatmap();
+      }
+    });
+  // trace movement events
+    var updateTracePreview = function(){
       var timeValues = $('#positionHeatMapSlider').val().split(',');
-      drawTraceOverlay(frames, 'traceOverlay', $(this).attr('data-person-id'), timeValues[0], timeValues[1]);
-      $('#traceOverlay').show();
-      activeTracePersonId = $(this).attr('data-person-id');
+      //console.log(activeTracePersonIds)
+      if(activeTracePersonIds.length > 0)  {
+        drawTraceOverlay(frames, 'traceOverlay', activeTracePersonIds, timeValues[0], timeValues[1]);
+        $('#traceOverlay').show();
+      } else {
+        $('#traceOverlay').hide();
+      }
+      $('.traceImage').each(function(){
+        drawTraceOverlay(frames, $(this).attr('id'), [$(this).parent().attr('data-person-id')], timeValues[0], timeValues[1]);
+      })
     }
-  });
+    $('.trace').click(function(){
+      // deactivate click
+      if($(this).children('.traceImage').hasClass('active')){
+        $(this).children('.traceImage').removeClass('active');
+        $(this).children('.traceText').removeClass('active');
 
-  $('.panel').slimScroll({
-    height: '720px',
-    color: '#c1c1c1',
-    wheelStep: 5
-  });
+        activeTracePersonIds = activeTracePersonIds.remove($(this).attr('data-person-id'));
+        updateTracePreview();
+      }
+      // activate click
+      else {
+        $(this).children('.traceImage').addClass('active');
+        $(this).children('.traceText').addClass('active');
+
+        activeTracePersonIds.push($(this).attr('data-person-id'));
+        updateTracePreview();
+      }
+    });
+  // initialize vis
+    updateHeatMapPreview();
+    updateTracePreview();
 }
 function initVideo(){
     var enableLogEvent = false;
@@ -825,9 +828,8 @@ function initVideo(){
     videos.forEach(function(video){
       video.addEventListener('canplay', playVideoIfAllVideoReady);
     });
-
 }
-function drawTraceOverlay(frames, divId, personId, startTime, endTime){
+function drawTraceOverlay(frames, divId, personIds, startTime, endTime){
   traceOverlayCanvas = new createjs.Stage(divId);
   centerX = traceOverlayCanvas.width/2;
   centerY = traceOverlayCanvas.height/2;
@@ -844,8 +846,10 @@ function drawTraceOverlay(frames, divId, personId, startTime, endTime){
   }
 
   traceOverlayCanvas.removeAllChildren();
-  var d = drawOverviewMovement(frames, personId, startFrame, endFrame, personConfig[personId].movementColor.backward, {r:0,g:0,b:0});
-  traceOverlayCanvas.addChild(d);
+  for(var i=0; i<personIds.length; i++){
+    var d = drawOverviewMovement(frames, personIds[i], startFrame, endFrame, personConfig[personIds[i]].movementColor.backward, {r:0,g:0,b:0});
+    traceOverlayCanvas.addChild(d);
+  }
   traceOverlayCanvas.update();
 }
 function drawHeatmap(frames, divId, personId, startTime, endTime){
@@ -2145,3 +2149,13 @@ function pad(num, size) {
     while (s.length < size) s = "0" + s;
     return s;
 }
+Array.prototype.remove = function() {
+    var what, a = arguments, L = a.length, ax;
+    while (L && this.length) {
+        what = a[--L];
+        while ((ax = this.indexOf(what)) !== -1) {
+            this.splice(ax, 1);
+        }
+    }
+    return this;
+};
