@@ -126,7 +126,10 @@ video {
 	width: 430px;
 }
 #videoSeekBarCss .slider-selection {
-	background: #84c4e4;
+	background: #999999;
+}
+#videoSeekBarCss .slider-handle {
+	background: #333333;
 }
 #videoPlayButton {
 	width: 62px;
