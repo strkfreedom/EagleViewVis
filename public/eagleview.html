@@ -44,8 +44,14 @@
 	          </div>
 	          <div class="row">
 	          	<div class="col-lg-12">
-	            Frame: <span id="frameBox"></span><br>
-	            Time: <span id="timeBox"></span>
+	            <span id="frameSpan">Frame: <span id="frameBox"></span><br></span>
+	            Time: <span id="timeBox"></span><br>
+	            <div class="row" id="videoPlayButtonRow">
+	            	<div class="col-lg-12">
+			            <button type="button" class="btn btn-default btn-sm" id="videoPlayButton">Play</button>
+			            <input type="text" id="videoSeekBar" data-slider-tooltip="hide">
+		            </div>
+	            </div>
 	            </div>
 	          </div>
         </div>
@@ -54,15 +60,15 @@
 	            <source src="videos/200_side1.mp4" type="video/mp4">
 	          Your browser does not support the video tag.
 	          </video>
-	          <video width="320" height="180" id="video2">
+	          <video width="320" height="180" id="video2" controls>
 	            <source src="videos/200_side2.mp4" type="video/mp4">
 	          Your browser does not support the video tag.
 	          </video>
-	          <video width="320" height="180" id="video3">
+	          <video width="320" height="180" id="video3" controls>
 	            <source src="videos/200_top.mp4" type="video/mp4">
 	          Your browser does not support the video tag.
 	          </video>
-	          <video width="320" height="180" id="video4">
+	          <video width="320" height="180" id="video4" controls>
 	            <source src="videos/200_eagle.mp4" type="video/mp4">
 	          Your browser does not support the video tag.
 	          </video>

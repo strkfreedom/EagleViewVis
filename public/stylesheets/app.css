@@ -121,8 +121,18 @@ video {
 #backgroundOpacitySliderCss {
 	width: 180px;
 }
-#mapTimeLabel {
-
+#videoSeekBarCss {
+	margin-left: 15px;
+	width: 430px;
+}
+#videoSeekBarCss .slider-selection {
+	background: #84c4e4;
+}
+#videoPlayButton {
+	width: 62px;
+}
+#videoPlayButtonRow {
+	margin-top: 10px;
 }
 .checkbox {
 	margin: 0;

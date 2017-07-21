@@ -23,7 +23,7 @@ var groupConfig = [ {r:125, g:0, b:0},
 var preferences = {drawLine:[], showZones:false}; //{drawLine:[{from:{type:"person", id:0}, to:{type:"person", id:1}}]};
 var canvas, margin, stage;
 var mode = "run";
-var debugFrame = 404;
+var debugFrame = 85;
 var eagleSenseData;
 var playbackStatus = 'pause';
 var currentFrame = 0; 
@@ -31,6 +31,7 @@ var currentTime = 0;
 var playFirstFrame = false;
 var video1;
 var heatmapData, maxHeatMapValue, activeHeatMapPersonIds = [], activeTracePersonIds = [];
+var initiatedVideoSeekBar = false, videoSeekBar, videoPlayButton = "clickToPlay";
 const HAVE_ENOUGH_DATA = 4;
 
 function loadData(step) {
@@ -111,120 +112,119 @@ function init(data) {
       frames = returnObject.frames;
     });
 
-    initVideo();
     $('#video1').on('loadedmetadata', function(){
+      initVideo();
       initUI(frames);
       initSummaryView(frames);
+      ticker();
 
-/*
-      var timeValues = $('#positionHeatMapSlider').val().split(',');
-      //console.log(timeValues)
-      drawHeatmap(frames, 'heatSample', 0, timeValues[0], timeValues[1]);
-      drawHeatmap(frames, 'heatSample2', 1, timeValues[0], timeValues[1]);
-      drawHeatmap(frames, 'heatSample3', 2, timeValues[0], timeValues[1]);
-      //©drawHeatmap(frames, 'heatSample4', 3, timeValues[0], timeValues[1]);
-      //drawHeatmap(frames, 'overlay', 0, timeValues[0], timeValues[1]);
-
-      drawTraceOverlay(frames, 'traceSample1', 0, 0, 93);
-      drawTraceOverlay(frames, 'traceSample2', 1, 0, 93);
-      drawTraceOverlay(frames, 'traceSample3', 2, 0, 93);*/
       $('#loadingIcon').remove();
     })
 
-    createjs.Ticker.setFPS(appConfig.targetFPS);
-    createjs.Ticker.addEventListener("tick", function() {
-      if(currentFrame >= frames.length) return;
-      if(mode == 'debugFrame') {
-        currentFrame = debugFrame;
-        console.log(frames[debugFrame]);
-      }
-
-      //console.log(playbackStatus, currentFrame, currentTime, frames[currentFrame].localTime)
-      if(playbackStatus == 'pause' || playbackStatus == 'waitingToPlay') {
-        // no change to current frame
-      }
-      else if(playbackStatus == 'playAndSeeking' || playbackStatus == 'pauseAndSeeking') {
-        // change current frame
-        currentFrame = 0;
-        while(frames[currentFrame].localTime < currentTime){
-          currentFrame++;
-          if(currentFrame >= frames.length) console.log('error no frame match current time')
-        }
-      } 
-      else if(playbackStatus == 'play' ) {
-        // increase current frame
-        if(currentTime == 0 && !playFirstFrame) playFirstFrame = true;
-        else currentTime+= 1000/appConfig.targetFPS;
-
-        while(frames[currentFrame].localTime < currentTime){
-          currentFrame++;
-          if(currentFrame >= frames.length) console.log('error no frame match current time')
-        }
-      }
-
-      document.getElementById('frameBox').innerHTML = currentFrame+" / "+frames.length;
-      document.getElementById('timeBox').innerHTML = getTimeString( frames[currentFrame].localTime/1000 )+" / "+getTimeString(video1.duration);
-
-      stage.removeAllChildren();
-      //stage.addChild(drawFixedObject(0, "cabinet", 600,50,80,40,0));
-      //stage.addChild(drawFixedObject(1, "couch", 200,350,300,100,0));
-      //stage.addChild(drawZone(frames[currentFrame].persons, "arc", "Touch Zone", 100, 40, 200, 100, {r:220, g:20, b:60}, 0));
-      //stage.addChild(drawZone(frames[currentFrame].persons, "rectangle", "Interact", 100, 220, 400, 200, {r:220, g:20, b:60}, 0));
-      if(preferences.showZones == true) {
-        stage.addChild(drawZone(frames[currentFrame].persons, "rectangle", "<1.2m", 100, 120, 400, 300, {r:220, g:20, b:60}, 0));
-        stage.addChild(drawZone(frames[currentFrame].persons, "rectangle", "1.2-1.5m", 100, 45, 400, 75, {r:34, g:139, b:34}, 0));        
-      }
-      var currentFrameInteractiveObjects = [];
-      for(var i=0; i<frames[currentFrame].interactiveObjects.length; i++){
-        currentFrameInteractiveObjects.push(frames[currentFrame].interactiveObjects[i]);
-        stage.addChild(frames[currentFrame].interactiveObjects[i]);
-      }
-      var currentFramePersons = [];
-      for(var i=0; i<noOfPerson; i++) {
-        if(frames[currentFrame].persons[i].isInMap == true) {
-          currentFramePersons.push( frames[currentFrame].persons[i].person );
-          if(appConfig.backwardMovementSeconds > 0) {
-            stage.addChild(drawBackwardMovement(frames, currentFrame, i, appConfig.backwardMovementSeconds, {r:personConfig[i].movementColor.backward.r, g:personConfig[i].movementColor.backward.g, b:personConfig[i].movementColor.backward.b}));
+    function ticker(){
+        createjs.Ticker.setFPS(appConfig.targetFPS);
+        createjs.Ticker.addEventListener("tick", function() {
+          if(currentFrame >= frames.length) return;
+          if(mode == 'debugFrame') {
+            currentFrame = debugFrame;
+            console.log(frames[debugFrame]);
           }
-          if(appConfig.forwardMovementSeconds > 0) {
-          stage.addChild(drawForwardMovement(frames, currentFrame, i, appConfig.forwardMovementSeconds, {r:personConfig[i].movementColor.forward.r, g:personConfig[i].movementColor.forward.g, b:personConfig[i].movementColor.forward.b}));
+
+          //console.log(playbackStatus, currentFrame, currentTime, frames[currentFrame].localTime)
+          if(playbackStatus == 'pause' || playbackStatus == 'waitingToPlay') {
+            // no change to current frame
           }
-          stage.addChild( frames[currentFrame].persons[i].person );
-          //stage.addChild(drawPersonLineOfSight(frames[currentFrame].persons[i].person));
-        }
-      }
-      for(var i=0; i<preferences.drawLine.length; i++){
-        if(!preferences.drawLine[i] || !preferences.drawLine[i].from || !preferences.drawLine[i].to) continue;
-        var o1, o2;
-        var from = preferences.drawLine[i].from;
-        var to = preferences.drawLine[i].to;
-        //console.log(from.id, to.id)
-        if(from.type == 'person'){
-          if(frames[currentFrame].persons[from.id].isInMap == true) o1 = frames[currentFrame].persons[from.id].person;
-          else continue;
-        } else {
-          o1 = currentFrameInteractiveObjects[from.id];
-        }
+          else if(playbackStatus == 'playAndSeeking' || playbackStatus == 'pauseAndSeeking') {
+            // change current frame
+            currentFrame = 0;
+            while(frames[currentFrame].localTime < currentTime){
+              currentFrame++;
+              if(currentFrame >= frames.length) console.log('error no frame match current time')
+            }
+          } 
+          else if(playbackStatus == 'play' ) {
+            // increase current frame
+            if(currentTime == 0 && !playFirstFrame) playFirstFrame = true;
+            else currentTime+= 1000/appConfig.targetFPS;
 
-        if(to.type == 'person'){
-          if(frames[currentFrame].persons[to.id].isInMap == true) o2 = frames[currentFrame].persons[to.id].person;
-          else continue;
-        } else {
-          o2 = currentFrameInteractiveObjects[to.id];
-        }
+            while(frames[currentFrame].localTime < currentTime){
+              currentFrame++;
+              if(currentFrame >= frames.length) console.log('error no frame match current time')
+            }
+          }
 
-        stage.addChild(drawDistance(o1, o2));
-      }
-      //if(currentFramePersons.length >= 2) {
-        //stage.addChild(drawDistance(currentFramePersons[0], currentFramePersons[1]));
-      //}
-      if(frames[currentFrame].formations){
-        for(var i=0; i<frames[currentFrame].formations.length; i++) {
-          stage.addChild(frames[currentFrame].formations[i]);
-        }
-      }
-      canvas.update();
-    });
+          if(initiatedVideoSeekBar){
+            if(playbackStatus == 'playAndSeeking' || playbackStatus == 'pauseAndSeeking'){
+
+            } else {
+              videoSeekBar.slider('setValue', Math.floor(currentTime/1000));
+            }
+          }
+
+          document.getElementById('frameBox').innerHTML = currentFrame+" / "+frames.length;
+          document.getElementById('timeBox').innerHTML = getTimeString( frames[currentFrame].localTime/1000 )+" / "+getTimeString(video1.duration);
+
+          stage.removeAllChildren();
+          //stage.addChild(drawFixedObject(0, "cabinet", 600,50,80,40,0));
+          //stage.addChild(drawFixedObject(1, "couch", 200,350,300,100,0));
+          //stage.addChild(drawZone(frames[currentFrame].persons, "arc", "Touch Zone", 100, 40, 200, 100, {r:220, g:20, b:60}, 0));
+          //stage.addChild(drawZone(frames[currentFrame].persons, "rectangle", "Interact", 100, 220, 400, 200, {r:220, g:20, b:60}, 0));
+          if(preferences.showZones == true) {
+            stage.addChild(drawZone(frames[currentFrame].persons, "rectangle", "<1.2m", 100, 120, 400, 300, {r:220, g:20, b:60}, 0));
+            stage.addChild(drawZone(frames[currentFrame].persons, "rectangle", "1.2-1.5m", 100, 45, 400, 75, {r:34, g:139, b:34}, 0));        
+          }
+          var currentFrameInteractiveObjects = [];
+          for(var i=0; i<frames[currentFrame].interactiveObjects.length; i++){
+            currentFrameInteractiveObjects.push(frames[currentFrame].interactiveObjects[i]);
+            stage.addChild(frames[currentFrame].interactiveObjects[i]);
+          }
+          var currentFramePersons = [];
+          for(var i=0; i<noOfPerson; i++) {
+            if(frames[currentFrame].persons[i].isInMap == true) {
+              currentFramePersons.push( frames[currentFrame].persons[i].person );
+              if(appConfig.backwardMovementSeconds > 0) {
+                stage.addChild(drawBackwardMovement(frames, currentFrame, i, appConfig.backwardMovementSeconds, {r:personConfig[i].movementColor.backward.r, g:personConfig[i].movementColor.backward.g, b:personConfig[i].movementColor.backward.b}));
+              }
+              if(appConfig.forwardMovementSeconds > 0) {
+              stage.addChild(drawForwardMovement(frames, currentFrame, i, appConfig.forwardMovementSeconds, {r:personConfig[i].movementColor.forward.r, g:personConfig[i].movementColor.forward.g, b:personConfig[i].movementColor.forward.b}));
+              }
+              stage.addChild( frames[currentFrame].persons[i].person );
+              //stage.addChild(drawPersonLineOfSight(frames[currentFrame].persons[i].person));
+            }
+          }
+          for(var i=0; i<preferences.drawLine.length; i++){
+            if(!preferences.drawLine[i] || !preferences.drawLine[i].from || !preferences.drawLine[i].to) continue;
+            var o1, o2;
+            var from = preferences.drawLine[i].from;
+            var to = preferences.drawLine[i].to;
+            //console.log(from.id, to.id)
+            if(from.type == 'person'){
+              if(frames[currentFrame].persons[from.id].isInMap == true) o1 = frames[currentFrame].persons[from.id].person;
+              else continue;
+            } else {
+              o1 = currentFrameInteractiveObjects[from.id];
+            }
+
+            if(to.type == 'person'){
+              if(frames[currentFrame].persons[to.id].isInMap == true) o2 = frames[currentFrame].persons[to.id].person;
+              else continue;
+            } else {
+              o2 = currentFrameInteractiveObjects[to.id];
+            }
+
+            stage.addChild(drawDistance(o1, o2));
+          }
+          //if(currentFramePersons.length >= 2) {
+            //stage.addChild(drawDistance(currentFramePersons[0], currentFramePersons[1]));
+          //}
+          if(frames[currentFrame].formations){
+            for(var i=0; i<frames[currentFrame].formations.length; i++) {
+              stage.addChild(frames[currentFrame].formations[i]);
+            }
+          }
+          canvas.update();
+        });
+    }
   } else {
     debug(stage, canvas);
   }
@@ -237,7 +237,7 @@ function debug(){
 
   // 2 person side by side 180 degree
   p1_1 = drawPerson("0", "0", 100, 200, -3, -3, "phone");
-  p1_2 = drawPerson("1", "1", 200, 200, 160, 160, "phone");
+  p1_2 = drawPerson("1", "1", 200, 200, 160, 160, "tablet");
 
   // 3 person side by side
   //p1_1 = drawPerson("0", "0", 120, 280, -70, -70, "phone");
@@ -589,6 +589,8 @@ function loadForm(returnFunction){
   return returnFunction();
 }
 function initUI(frames){
+  //$('#frameSpan').hide();
+
   $('.colorpicker-component').colorpicker();
   $('#summaryView').hide();
 
@@ -769,6 +771,7 @@ function initVideo(){
       }
     });
 
+
     canPlay = function(){
       var allCanPlay = true;
       videos.forEach(function(video){
@@ -787,9 +790,10 @@ function initVideo(){
         });*/
         if(canPlay() == false) {
           playbackStatus = 'waitingToPlay';
-          video1.pause();
+          handlePauseEvent();
         } else {
           playbackStatus = 'play';
+          video1.play();
           video2.play();
           video3.play();
           video4.play();
@@ -804,11 +808,11 @@ function initVideo(){
           playbackStatus = 'pause';
           if(enableLogEvent) console.log('pause')
         }
+        video1.pause();
         video2.pause();
         video3.pause();
         video4.pause();
         videoOverlay.pause();
-        //videoOverlay2.pause();
     }
     handleSeekEvent = function(){
         if(playbackStatus == 'play' || playbackStatus == 'waitingToPlay' || playbackStatus == 'playAndSeeking'){
@@ -819,24 +823,57 @@ function initVideo(){
           if(enableLogEvent) console.log('pause and seeking');
           playbackStatus = 'pauseAndSeeking';
         }
-        video2.currentTime = video1.currentTime;
-        video3.currentTime = video1.currentTime;
-        video4.currentTime = video1.currentTime;
-        videoOverlay.currentTime = video1.currentTime;
+        video1.currentTime = $('#videoSeekBar').val();
+        video2.currentTime = $('#videoSeekBar').val();
+        video3.currentTime = $('#videoSeekBar').val();
+        video4.currentTime = $('#videoSeekBar').val();
+        videoOverlay.currentTime = $('#videoSeekBar').val();
         //videoOverlay2.currentTime = video1.currentTime;
-        currentTime = parseInt(video1.currentTime*1000);
+        currentTime = parseInt($('#videoSeekBar').val()*1000);
         if(currentTime == 0) playFirstFrame = false;
+    }
+    handleSeekStopEvent = function(){
+      if(playbackStatus == 'playAndSeeking'){
+        handlePlayEvent();
+      } else {
+        handlePauseEvent();
+      }
     }
     playVideoIfAllVideoReady = function(){
       if( (playbackStatus == 'waitingToPlay' || playbackStatus == 'playAndSeeking') && canPlay()){
-        video1.play();
+        handlePlayEvent();
       }
     }
-    video1.addEventListener('playing', handlePlayEvent, false);
-    video1.addEventListener('play', handlePlayEvent, false);
-    video1.addEventListener('pause', handlePauseEvent, false);
-    video1.addEventListener('seeking', handleSeekEvent, false);
-    video1.addEventListener('seeked', handleSeekEvent, false);
+    videoSeekBar = $('#videoSeekBar').slider({ 
+      id: 'videoSeekBarCss', 
+      min: 0, 
+      max: Math.floor(video1.duration), 
+      value: 0});
+    videoSeekBar.on('slideStart', handleSeekEvent);
+    videoSeekBar.on('slide', handleSeekEvent);
+    videoSeekBar.on('slideStop', handleSeekStopEvent);
+    $('#videoPlayButton').on('click', function(){
+      if(videoPlayButton == 'clickToPlay'){
+        // play
+        videoPlayButton = 'clickToPause';
+        $(this).html('Pause');
+        $(this).blur();
+        handlePlayEvent();
+      } else {
+        // pause
+        videoPlayButton = 'clickToPlay';
+        $(this).html('Play');
+        $(this).blur();
+        handlePauseEvent();
+      }
+    })
+    //video1.addEventListener('playing', handlePlayEvent, false);
+    //video1.addEventListener('play', handlePlayEvent, false);
+    //video1.addEventListener('pause', handlePauseEvent, false);
+    //video1.addEventListener('seeking', handleSeekEvent, false);
+    //video1.addEventListener('seeked', handleSeekEvent, false);
+    initiatedVideoSeekBar = true;
+
     videos.forEach(function(video){
       video.addEventListener('canplay', playVideoIfAllVideoReady);
     });
@@ -1869,10 +1906,10 @@ function drawPerson(id, name, x, y, bodyDegree, headDegree, activity, color, dis
     return person;
 }
 function drawMobileObject(type, x, y, rotation, color){
-  var config = {phone:{w:10,h:15,r:2, xFromBody:15, yFromBody:-50}, 
-                phone_b:{size:1, offsetX:0, offsetY:5},
-                tablet:{w:25,h:35,r:3, xFromBody:15, yFromBody:-55, rFromBody:5},
-                tablet_s:{w:20,h:30}};
+  var config = {phone:{w:16,h:24,r:2, xFromBody:20, yFromBody:-70}, 
+                phone_b:{size:2, offsetX:1, offsetY:7},
+                tablet:{w:32,h:48,r:3, xFromBody:20, yFromBody:-70, rFromBody:5},
+                tablet_s:{w:28,h:40}};
   var mo = new createjs.Container();
   mo.type = "mobile";
   mo.fixed = false;
