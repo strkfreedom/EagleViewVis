@@ -877,11 +877,13 @@ function initVideo(frames){
       if($('#videoPlayButtonStatus').val() == 'clickToPlay'){
         $('#videoPlayButtonStatus').val('clickToPause');
         $('#videoPlayButton').html('Pause');
+        $('#videoPlayButton').removeClass('btn-primary');
         $('#videoPlayButton').blur();
         handlePlayEvent();
       } else {
         $('#videoPlayButtonStatus').val('clickToPlay');
         $('#videoPlayButton').html('Play');
+        $('#videoPlayButton').addClass('btn-primary');
         $('#videoPlayButton').blur();
         handlePauseEvent();
       }
