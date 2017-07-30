@@ -1,4 +1,5 @@
-var appConfig = { originalFPS: 25, 
+var appConfig = { showFrameBox: false,
+                  originalFPS: 25, 
                   targetFPS: 4, 
                   sightAngle: 90, 
                   backwardMovementSeconds: 0, 
@@ -32,6 +33,7 @@ var playFirstFrame = false;
 var video1;
 var heatmapData, maxHeatMapValue, activeHeatMapPersonIds = [], activeTracePersonIds = [];
 var initiatedVideoSeekBar = false, videoSeekBar, videoPlayButton = "clickToPlay";
+var handlePauseEvent;
 const HAVE_ENOUGH_DATA = 4;
 
 function loadData(step) {
@@ -113,7 +115,7 @@ function init(data) {
     });
 
     $('#video1').on('loadedmetadata', function(){
-      initVideo();
+      initVideo(frames);
       initUI(frames);
       initSummaryView(frames);
       ticker();
@@ -124,7 +126,12 @@ function init(data) {
     function ticker(){
         createjs.Ticker.setFPS(appConfig.targetFPS);
         createjs.Ticker.addEventListener("tick", function() {
-          if(currentFrame >= frames.length) return;
+          if(currentFrame >= frames.length) {
+            //console.log('pause');
+            if($('#videoPlayButtonStatus').val() == 'clickToPause') $('#videoPlayButtonStatus').trigger('change');
+            handlePauseEvent();
+            return;
+          }
           if(mode == 'debugFrame') {
             currentFrame = debugFrame;
             console.log(frames[debugFrame]);
@@ -136,21 +143,23 @@ function init(data) {
           }
           else if(playbackStatus == 'playAndSeeking' || playbackStatus == 'pauseAndSeeking') {
             // change current frame
-            currentFrame = 0;
-            while(frames[currentFrame].localTime < currentTime){
-              currentFrame++;
-              if(currentFrame >= frames.length) console.log('error no frame match current time')
-            }
           } 
           else if(playbackStatus == 'play' ) {
             // increase current frame
             if(currentTime == 0 && !playFirstFrame) playFirstFrame = true;
             else currentTime+= 1000/appConfig.targetFPS;
 
-            while(frames[currentFrame].localTime < currentTime){
-              currentFrame++;
-              if(currentFrame >= frames.length) console.log('error no frame match current time')
-            }
+          }
+
+          currentFrame = 0;
+          while(frames[currentFrame] != null && frames[currentFrame].localTime < currentTime){
+            currentFrame++;
+            if(currentFrame >= frames.length) {
+              console.log('Warning: no frame match current time');
+              if($('#videoPlayButtonStatus').val() == 'clickToPause') $('#videoPlayButtonStatus').trigger('change');
+              handlePauseEvent();
+              return;
+            } 
           }
 
           if(initiatedVideoSeekBar){
@@ -161,8 +170,8 @@ function init(data) {
             }
           }
 
-          document.getElementById('frameBox').innerHTML = currentFrame+" / "+frames.length;
-          document.getElementById('timeBox').innerHTML = getTimeString( frames[currentFrame].localTime/1000 )+" / "+getTimeString(video1.duration);
+          document.getElementById('frameBox').innerHTML = "Frame: "+currentFrame+" / "+frames.length+"<br>";
+          document.getElementById('timeBox').innerHTML = getTimeString( frames[currentFrame].localTime/1000 )+" / "+getTimeString(frames[frames.length-1].localTime/1000);
 
           stage.removeAllChildren();
           //stage.addChild(drawFixedObject(0, "cabinet", 600,50,80,40,0));
@@ -589,7 +598,7 @@ function loadForm(returnFunction){
   return returnFunction();
 }
 function initUI(frames){
-  //$('#frameSpan').hide();
+  if(appConfig.showFrameBox == false) $('#frameBox').hide();
 
   $('.colorpicker-component').colorpicker();
   $('#summaryView').hide();
@@ -731,7 +740,7 @@ function initSummaryView(frames){
     updateHeatMapPreview();
     updateTracePreview();
 }
-function initVideo(){
+function initVideo(frames){
     var enableLogEvent = false;
     video1 = document.getElementById('video1');
     video2 = document.getElementById('video2');
@@ -793,11 +802,19 @@ function initVideo(){
           handlePauseEvent();
         } else {
           playbackStatus = 'play';
+          videos.forEach(function(v){
+            if(v.duration >= $('#videoSeekBar').val()){
+              v.play();
+            } else {
+              v.pause();
+            }
+          });
+          /*
           video1.play();
           video2.play();
           video3.play();
           video4.play();
-          videoOverlay.play();
+          videoOverlay.play();*/
         }
         //videoOverlay2.play();
     }
@@ -847,26 +864,29 @@ function initVideo(){
     videoSeekBar = $('#videoSeekBar').slider({ 
       id: 'videoSeekBarCss', 
       min: 0, 
-      max: Math.floor(video1.duration), 
+      max: Math.floor(frames[frames.length-1].localTime/1000), 
       value: 0});
     videoSeekBar.on('slideStart', handleSeekEvent);
     videoSeekBar.on('slide', handleSeekEvent);
     videoSeekBar.on('slideStop', handleSeekStopEvent);
+    videoSeekBar.on('change', handleSeekEvent);
     $('#videoPlayButton').on('click', function(){
-      if(videoPlayButton == 'clickToPlay'){
-        // play
-        videoPlayButton = 'clickToPause';
-        $(this).html('Pause');
-        $(this).blur();
+      $('#videoPlayButtonStatus').trigger('change');
+    })
+    $('#videoPlayButtonStatus').change( function(){
+      //console.log('change', $('#videoPlayButtonStatus').val())
+      if($('#videoPlayButtonStatus').val() == 'clickToPlay'){
+        $('#videoPlayButtonStatus').val('clickToPause');
+        $('#videoPlayButton').html('Pause');
+        $('#videoPlayButton').blur();
         handlePlayEvent();
       } else {
-        // pause
-        videoPlayButton = 'clickToPlay';
-        $(this).html('Play');
-        $(this).blur();
+        $('#videoPlayButtonStatus').val('clickToPlay');
+        $('#videoPlayButton').html('Play');
+        $('#videoPlayButton').blur();
         handlePauseEvent();
       }
-    })
+    });
     //video1.addEventListener('playing', handlePlayEvent, false);
     //video1.addEventListener('play', handlePlayEvent, false);
     //video1.addEventListener('pause', handlePauseEvent, false);
