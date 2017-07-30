@@ -126,12 +126,6 @@ function init(data) {
     function ticker(){
         createjs.Ticker.setFPS(appConfig.targetFPS);
         createjs.Ticker.addEventListener("tick", function() {
-          if(currentFrame >= frames.length) {
-            //console.log('pause');
-            if($('#videoPlayButtonStatus').val() == 'clickToPause') $('#videoPlayButtonStatus').trigger('change');
-            handlePauseEvent();
-            return;
-          }
           if(mode == 'debugFrame') {
             currentFrame = debugFrame;
             console.log(frames[debugFrame]);
@@ -155,7 +149,7 @@ function init(data) {
           while(frames[currentFrame] != null && frames[currentFrame].localTime < currentTime){
             currentFrame++;
             if(currentFrame >= frames.length) {
-              console.log('Warning: no frame match current time');
+              //console.log('Warning: no frame match current time');
               if($('#videoPlayButtonStatus').val() == 'clickToPause') $('#videoPlayButtonStatus').trigger('change');
               handlePauseEvent();
               return;
@@ -797,6 +791,13 @@ function initVideo(frames){
         videos.forEach(function(video){
           console.log(video.readyState, canPlay)
         });*/
+        if($('#videoSeekBar').val() >= videoSeekBar.max) {
+          videoSeekBar.slider('setValue', 0);
+          videos.forEach(function(v){
+            v.currentTime = $('#videoSeekBar').val();
+          });
+          currentTime = 0;
+        }
         if(canPlay() == false) {
           playbackStatus = 'waitingToPlay';
           handlePauseEvent();
@@ -840,12 +841,9 @@ function initVideo(frames){
           if(enableLogEvent) console.log('pause and seeking');
           playbackStatus = 'pauseAndSeeking';
         }
-        video1.currentTime = $('#videoSeekBar').val();
-        video2.currentTime = $('#videoSeekBar').val();
-        video3.currentTime = $('#videoSeekBar').val();
-        video4.currentTime = $('#videoSeekBar').val();
-        videoOverlay.currentTime = $('#videoSeekBar').val();
-        //videoOverlay2.currentTime = video1.currentTime;
+        videos.forEach(function(v){
+          v.currentTime = $('#videoSeekBar').val();
+        });
         currentTime = parseInt($('#videoSeekBar').val()*1000);
         if(currentTime == 0) playFirstFrame = false;
     }
@@ -870,6 +868,7 @@ function initVideo(frames){
     videoSeekBar.on('slide', handleSeekEvent);
     videoSeekBar.on('slideStop', handleSeekStopEvent);
     videoSeekBar.on('change', handleSeekEvent);
+    videoSeekBar.max = Math.floor(frames[frames.length-1].localTime/1000);
     $('#videoPlayButton').on('click', function(){
       $('#videoPlayButtonStatus').trigger('change');
     })
