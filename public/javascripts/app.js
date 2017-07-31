@@ -1,4 +1,4 @@
-var appConfig = { showFrameBox: false,
+var appConfig = { showFrameBox: true,
                   originalFPS: 25, 
                   targetFPS: 4, 
                   sightAngle: 90, 
@@ -674,12 +674,12 @@ function initSummaryView(frames){
       }
     }
 
-    setHeatMapLabel(0, Math.floor(video1.duration));
+    setHeatMapLabel(0, Math.floor(frames[frames.length-1].localTime/1000));
     $("#positionHeatMapSlider").slider({ 
       id: 'positionHeatMapSliderCss', 
       min: 0, 
-      max: Math.floor(video1.duration), 
-      value: [0, Math.floor(video1.duration)]})
+      max: Math.floor(frames[frames.length-1].localTime/1000), 
+      value: [0, Math.floor(frames[frames.length-1].localTime/1000)]})
     .on('slide', slidingHeatMap)
     .on('slideStop', stopSlidingHeatMap);
     $('.overview').click(function(){
@@ -741,7 +741,8 @@ function initVideo(frames){
     video3 = document.getElementById('video3');
     video4 = document.getElementById('video4');
     videoOverlay = document.getElementById('videoOverlay');
-    var videos = [video1, video2, video3, video4, videoOverlay];
+    var videos = [video1, video2, video3, videoOverlay];
+    if(video4 != null) videos.push(video4);
     //videoOverlay2 = document.getElementById('videoOverlay2');
     $('#videoOverlay').hide();
     //$('#videoOverlay2').hide();
@@ -749,7 +750,7 @@ function initVideo(frames){
     	if($(this).is(':checked')){
     		$('#videoOverlay').show();
         //$('#videoOverlay2').hide();
-        $('#videoOverylayCheckbox2').prop('checked', false);
+        //$('#videoOverylayCheckbox2').prop('checked', false);
     	} else {
     		$('#videoOverlay').hide();
         //$('#videoOverlay2').hide();
@@ -810,14 +811,7 @@ function initVideo(frames){
               v.pause();
             }
           });
-          /*
-          video1.play();
-          video2.play();
-          video3.play();
-          video4.play();
-          videoOverlay.play();*/
         }
-        //videoOverlay2.play();
     }
     handlePauseEvent = function(){
         if(playbackStatus == 'waitingToPlay') {
@@ -826,11 +820,9 @@ function initVideo(frames){
           playbackStatus = 'pause';
           if(enableLogEvent) console.log('pause')
         }
-        video1.pause();
-        video2.pause();
-        video3.pause();
-        video4.pause();
-        videoOverlay.pause();
+        videos.forEach(function(v){
+          v.pause();
+        });
     }
     handleSeekEvent = function(){
         if(playbackStatus == 'play' || playbackStatus == 'waitingToPlay' || playbackStatus == 'playAndSeeking'){
@@ -877,13 +869,13 @@ function initVideo(frames){
       if($('#videoPlayButtonStatus').val() == 'clickToPlay'){
         $('#videoPlayButtonStatus').val('clickToPause');
         $('#videoPlayButton').html('Pause');
-        $('#videoPlayButton').removeClass('btn-primary');
+        $('#videoPlayButton').removeClass('btn-danger');
         $('#videoPlayButton').blur();
         handlePlayEvent();
       } else {
         $('#videoPlayButtonStatus').val('clickToPlay');
         $('#videoPlayButton').html('Play');
-        $('#videoPlayButton').addClass('btn-primary');
+        $('#videoPlayButton').addClass('btn-danger');
         $('#videoPlayButton').blur();
         handlePauseEvent();
       }
