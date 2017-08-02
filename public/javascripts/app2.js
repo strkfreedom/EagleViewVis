@@ -1,4 +1,4 @@
-var appConfig = { showFrameBox: true,
+var appConfig = { showFrameBox: false,
                   originalFPS: 25, 
                   targetFPS: 4, 
                   sightAngle: 90, 
@@ -197,25 +197,27 @@ function init(data) {
           }
           for(var i=0; i<preferences.drawLine.length; i++){
             if(!preferences.drawLine[i] || !preferences.drawLine[i].from || !preferences.drawLine[i].to) continue;
-            var o1, o2;
-            var from = preferences.drawLine[i].from;
-            var to = preferences.drawLine[i].to;
-            //console.log(from.id, to.id)
-            if(from.type == 'person'){
-              if(frames[currentFrame].persons[from.id].isInMap == true) o1 = frames[currentFrame].persons[from.id].person;
-              else continue;
-            } else {
-              o1 = currentFrameInteractiveObjects[from.id];
-            }
+              var o1, o2;
+              var from = preferences.drawLine[i].from;
+              var to = preferences.drawLine[i].to;
+              //console.log(from.id, to.id)
+              if(from.id != null && to.id != null) {
+              if(from.type == 'person'){
+                if(frames[currentFrame].persons[from.id].isInMap == true) o1 = frames[currentFrame].persons[from.id].person;
+                else continue;
+              } else {
+                o1 = currentFrameInteractiveObjects[from.id];
+              }
 
-            if(to.type == 'person'){
-              if(frames[currentFrame].persons[to.id].isInMap == true) o2 = frames[currentFrame].persons[to.id].person;
-              else continue;
-            } else {
-              o2 = currentFrameInteractiveObjects[to.id];
-            }
+              if(to.type == 'person'){
+                if(frames[currentFrame].persons[to.id].isInMap == true) o2 = frames[currentFrame].persons[to.id].person;
+                else continue;
+              } else {
+                o2 = currentFrameInteractiveObjects[to.id];
+              }
 
-            stage.addChild(drawDistance(o1, o2));
+              stage.addChild(drawDistance(o1, o2));
+            }
           }
           //if(currentFramePersons.length >= 2) {
             //stage.addChild(drawDistance(currentFramePersons[0], currentFramePersons[1]));
@@ -397,6 +399,8 @@ function onFormInputUpdated(returnFunction){
             preferences.drawLine[index].from.id = $(pair).val()-100;
           }
         }
+      } else {
+        preferences.drawLine[index] = {from:{type:null, id:null}, to:{type:null, id:null}};
       }
     }
     /*

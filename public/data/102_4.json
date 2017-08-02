@@ -6,16 +6,34 @@
                 "id": 0, 
                 "activity": "paper", 
                 "head": {
-                    "x": 445, 
-                    "y": 195, 
-                    "orientation": -2.357299999999995, 
-                    "z": 70
+                    "x": 404, 
+                    "y": 128, 
+                    "orientation": -15.485399999999998, 
+                    "z": 72
                 }
             }
         ], 
-        "timestamp": 32042498426771, 
-        "timestamp_js": 1500040167528, 
+        "timestamp": 32042492086467, 
+        "timestamp_js": 1500040167053, 
         "localTime": 0
+    }, 
+    {
+        "skeletons": [
+            {
+                "activity_tracked": 1, 
+                "id": 0, 
+                "activity": "paper", 
+                "head": {
+                    "x": 439, 
+                    "y": 178, 
+                    "orientation": -10.802099999999996, 
+                    "z": 71
+                }
+            }
+        ], 
+        "timestamp": 32042496756140, 
+        "timestamp_js": 1500040167376, 
+        "localTime": 323
     }, 
     {
         "skeletons": [
@@ -33,7 +51,7 @@
         ], 
         "timestamp": 32042502085851, 
         "timestamp_js": 1500040167997, 
-        "localTime": 469
+        "localTime": 944
     }, 
     {
         "skeletons": [
@@ -51,7 +69,7 @@
         ], 
         "timestamp": 32042506426793, 
         "timestamp_js": 1500040168370, 
-        "localTime": 842
+        "localTime": 1317
     }, 
     {
         "skeletons": [
@@ -69,7 +87,7 @@
         ], 
         "timestamp": 32042508427387, 
         "timestamp_js": 1500040168605, 
-        "localTime": 1077
+        "localTime": 1552
     }, 
     {
         "skeletons": [
@@ -87,7 +105,7 @@
         ], 
         "timestamp": 32042510756506, 
         "timestamp_js": 1500040168755, 
-        "localTime": 1227
+        "localTime": 1702
     }, 
     {
         "skeletons": [
@@ -105,7 +123,7 @@
         ], 
         "timestamp": 32042515755937, 
         "timestamp_js": 1500040169245, 
-        "localTime": 1717
+        "localTime": 2192
     }, 
     {
         "skeletons": [
@@ -123,7 +141,7 @@
         ], 
         "timestamp": 32042518426701, 
         "timestamp_js": 1500040169596, 
-        "localTime": 2068
+        "localTime": 2543
     }, 
     {
         "skeletons": [
@@ -141,7 +159,7 @@
         ], 
         "timestamp": 32042520426963, 
         "timestamp_js": 1500040169743, 
-        "localTime": 2215
+        "localTime": 2690
     }, 
     {
         "skeletons": [
@@ -159,7 +177,7 @@
         ], 
         "timestamp": 32042523086050, 
         "timestamp_js": 1500040169999, 
-        "localTime": 2471
+        "localTime": 2946
     }, 
     {
         "skeletons": [
@@ -177,7 +195,7 @@
         ], 
         "timestamp": 32042525755890, 
         "timestamp_js": 1500040170342, 
-        "localTime": 2814
+        "localTime": 3289
     }, 
     {
         "skeletons": [
@@ -195,7 +213,7 @@
         ], 
         "timestamp": 32042528426701, 
         "timestamp_js": 1500040170498, 
-        "localTime": 2970
+        "localTime": 3445
     }, 
     {
         "skeletons": [
@@ -213,7 +231,7 @@
         ], 
         "timestamp": 32042530755872, 
         "timestamp_js": 1500040170781, 
-        "localTime": 3253
+        "localTime": 3728
     }, 
     {
         "skeletons": [
@@ -231,7 +249,7 @@
         ], 
         "timestamp": 32042534085810, 
         "timestamp_js": 1500040171062, 
-        "localTime": 3534
+        "localTime": 4009
     }, 
     {
         "skeletons": [
@@ -249,7 +267,7 @@
         ], 
         "timestamp": 32042535426833, 
         "timestamp_js": 1500040171259, 
-        "localTime": 3731
+        "localTime": 4206
     }, 
     {
         "skeletons": [
@@ -267,7 +285,7 @@
         ], 
         "timestamp": 32042538755847, 
         "timestamp_js": 1500040171542, 
-        "localTime": 4014
+        "localTime": 4489
     }, 
     {
         "skeletons": [
@@ -285,7 +303,7 @@
         ], 
         "timestamp": 32042540086214, 
         "timestamp_js": 1500040171731, 
-        "localTime": 4203
+        "localTime": 4678
     }, 
     {
         "skeletons": [
@@ -303,7 +321,7 @@
         ], 
         "timestamp": 32042544085740, 
         "timestamp_js": 1500040172134, 
-        "localTime": 4606
+        "localTime": 5081
     }, 
     {
         "skeletons": [
@@ -321,7 +339,7 @@
         ], 
         "timestamp": 32042546085918, 
         "timestamp_js": 1500040172285, 
-        "localTime": 4757
+        "localTime": 5232
     }, 
     {
         "skeletons": [
@@ -339,7 +357,7 @@
         ], 
         "timestamp": 32042548755735, 
         "timestamp_js": 1500040172564, 
-        "localTime": 5036
+        "localTime": 5511
     }, 
     {
         "skeletons": [
@@ -357,7 +375,7 @@
         ], 
         "timestamp": 32042551426807, 
         "timestamp_js": 1500040172908, 
-        "localTime": 5380
+        "localTime": 5855
     }, 
     {
         "skeletons": [
@@ -375,7 +393,7 @@
         ], 
         "timestamp": 32042554426671, 
         "timestamp_js": 1500040173159, 
-        "localTime": 5631
+        "localTime": 6106
     }, 
     {
         "skeletons": [
@@ -393,7 +411,7 @@
         ], 
         "timestamp": 32042556426588, 
         "timestamp_js": 1500040173281, 
-        "localTime": 5753
+        "localTime": 6228
     }, 
     {
         "skeletons": [
@@ -411,7 +429,7 @@
         ], 
         "timestamp": 32042558426696, 
         "timestamp_js": 1500040173597, 
-        "localTime": 6069
+        "localTime": 6544
     }, 
     {
         "skeletons": [
@@ -429,7 +447,7 @@
         ], 
         "timestamp": 32042561426486, 
         "timestamp_js": 1500040173855, 
-        "localTime": 6327
+        "localTime": 6802
     }, 
     {
         "skeletons": [
@@ -447,7 +465,7 @@
         ], 
         "timestamp": 32042563428283, 
         "timestamp_js": 1500040174097, 
-        "localTime": 6569
+        "localTime": 7044
     }, 
     {
         "skeletons": [
@@ -465,7 +483,7 @@
         ], 
         "timestamp": 32042565756068, 
         "timestamp_js": 1500040174321, 
-        "localTime": 6793
+        "localTime": 7268
     }, 
     {
         "skeletons": [
@@ -483,7 +501,7 @@
         ], 
         "timestamp": 32042567756134, 
         "timestamp_js": 1500040174533, 
-        "localTime": 7005
+        "localTime": 7480
     }, 
     {
         "skeletons": [
@@ -501,7 +519,7 @@
         ], 
         "timestamp": 32042571755627, 
         "timestamp_js": 1500040174829, 
-        "localTime": 7301
+        "localTime": 7776
     }, 
     {
         "skeletons": [
@@ -519,7 +537,7 @@
         ], 
         "timestamp": 32042573086027, 
         "timestamp_js": 1500040174983, 
-        "localTime": 7455
+        "localTime": 7930
     }, 
     {
         "skeletons": [
@@ -537,7 +555,7 @@
         ], 
         "timestamp": 32042575756091, 
         "timestamp_js": 1500040175196, 
-        "localTime": 7668
+        "localTime": 8143
     }, 
     {
         "skeletons": [
@@ -555,7 +573,7 @@
         ], 
         "timestamp": 32042578085793, 
         "timestamp_js": 1500040175489, 
-        "localTime": 7961
+        "localTime": 8436
     }, 
     {
         "skeletons": [
@@ -573,7 +591,7 @@
         ], 
         "timestamp": 32042580755643, 
         "timestamp_js": 1500040175763, 
-        "localTime": 8235
+        "localTime": 8710
     }, 
     {
         "skeletons": [
@@ -591,7 +609,7 @@
         ], 
         "timestamp": 32042583755535, 
         "timestamp_js": 1500040176025, 
-        "localTime": 8497
+        "localTime": 8972
     }, 
     {
         "skeletons": [
@@ -609,7 +627,7 @@
         ], 
         "timestamp": 32042586426542, 
         "timestamp_js": 1500040176313, 
-        "localTime": 8785
+        "localTime": 9260
     }, 
     {
         "skeletons": [
@@ -627,7 +645,7 @@
         ], 
         "timestamp": 32042589085871, 
         "timestamp_js": 1500040176522, 
-        "localTime": 8994
+        "localTime": 9469
     }, 
     {
         "skeletons": [
@@ -645,7 +663,7 @@
         ], 
         "timestamp": 32042591085807, 
         "timestamp_js": 1500040176792, 
-        "localTime": 9264
+        "localTime": 9739
     }, 
     {
         "skeletons": [
@@ -663,7 +681,7 @@
         ], 
         "timestamp": 32042592755532, 
         "timestamp_js": 1500040176949, 
-        "localTime": 9421
+        "localTime": 9896
     }, 
     {
         "skeletons": [
@@ -681,7 +699,7 @@
         ], 
         "timestamp": 32042595755844, 
         "timestamp_js": 1500040177191, 
-        "localTime": 9663
+        "localTime": 10138
     }, 
     {
         "skeletons": [
@@ -699,7 +717,7 @@
         ], 
         "timestamp": 32042598426407, 
         "timestamp_js": 1500040177575, 
-        "localTime": 10047
+        "localTime": 10522
     }, 
     {
         "skeletons": [
@@ -717,7 +735,7 @@
         ], 
         "timestamp": 32042600755685, 
         "timestamp_js": 1500040177774, 
-        "localTime": 10246
+        "localTime": 10721
     }, 
     {
         "skeletons": [
@@ -735,7 +753,7 @@
         ], 
         "timestamp": 32042604085969, 
         "timestamp_js": 1500040178038, 
-        "localTime": 10510
+        "localTime": 10985
     }, 
     {
         "skeletons": [
@@ -753,7 +771,7 @@
         ], 
         "timestamp": 32042605426599, 
         "timestamp_js": 1500040178289, 
-        "localTime": 10761
+        "localTime": 11236
     }, 
     {
         "skeletons": [
@@ -771,7 +789,7 @@
         ], 
         "timestamp": 32042608755418, 
         "timestamp_js": 1500040178565, 
-        "localTime": 11037
+        "localTime": 11512
     }, 
     {
         "skeletons": [
@@ -789,7 +807,7 @@
         ], 
         "timestamp": 32042610426576, 
         "timestamp_js": 1500040178708, 
-        "localTime": 11180
+        "localTime": 11655
     }, 
     {
         "skeletons": [
@@ -807,7 +825,7 @@
         ], 
         "timestamp": 32042612755518, 
         "timestamp_js": 1500040179006, 
-        "localTime": 11478
+        "localTime": 11953
     }, 
     {
         "skeletons": [
@@ -825,7 +843,7 @@
         ], 
         "timestamp": 32042616085681, 
         "timestamp_js": 1500040179263, 
-        "localTime": 11735
+        "localTime": 12210
     }, 
     {
         "skeletons": [
@@ -843,7 +861,7 @@
         ], 
         "timestamp": 32042617426736, 
         "timestamp_js": 1500040179489, 
-        "localTime": 11961
+        "localTime": 12436
     }, 
     {
         "skeletons": [
@@ -861,7 +879,7 @@
         ], 
         "timestamp": 32042621426681, 
         "timestamp_js": 1500040179756, 
-        "localTime": 12228
+        "localTime": 12703
     }, 
     {
         "skeletons": [
@@ -879,7 +897,7 @@
         ], 
         "timestamp": 32042623085355, 
         "timestamp_js": 1500040179985, 
-        "localTime": 12457
+        "localTime": 12932
     }, 
     {
         "skeletons": [
@@ -897,7 +915,7 @@
         ], 
         "timestamp": 32042626085634, 
         "timestamp_js": 1500040180264, 
-        "localTime": 12736
+        "localTime": 13211
     }, 
     {
         "skeletons": [
@@ -915,7 +933,7 @@
         ], 
         "timestamp": 32042627426680, 
         "timestamp_js": 1500040180471, 
-        "localTime": 12943
+        "localTime": 13418
     }, 
     {
         "skeletons": [
@@ -933,7 +951,7 @@
         ], 
         "timestamp": 32042629426531, 
         "timestamp_js": 1500040180722, 
-        "localTime": 13194
+        "localTime": 13669
     }, 
     {
         "skeletons": [
@@ -951,7 +969,7 @@
         ], 
         "timestamp": 32042632426227, 
         "timestamp_js": 1500040180973, 
-        "localTime": 13445
+        "localTime": 13920
     }, 
     {
         "skeletons": [
@@ -969,7 +987,7 @@
         ], 
         "timestamp": 32042636426266, 
         "timestamp_js": 1500040181356, 
-        "localTime": 13828
+        "localTime": 14303
     }, 
     {
         "skeletons": [
@@ -987,7 +1005,7 @@
         ], 
         "timestamp": 32042638085308, 
         "timestamp_js": 1500040181621, 
-        "localTime": 14093
+        "localTime": 14568
     }, 
     {
         "skeletons": [
@@ -1005,7 +1023,7 @@
         ], 
         "timestamp": 32042641085522, 
         "timestamp_js": 1500040181859, 
-        "localTime": 14331
+        "localTime": 14806
     }, 
     {
         "skeletons": [
@@ -1023,7 +1041,7 @@
         ], 
         "timestamp": 32042643426347, 
         "timestamp_js": 1500040182035, 
-        "localTime": 14507
+        "localTime": 14982
     }, 
     {
         "skeletons": [
@@ -1041,7 +1059,7 @@
         ], 
         "timestamp": 32042646085354, 
         "timestamp_js": 1500040182370, 
-        "localTime": 14842
+        "localTime": 15317
     }, 
     {
         "skeletons": [
@@ -1059,7 +1077,7 @@
         ], 
         "timestamp": 32042649085479, 
         "timestamp_js": 1500040182636, 
-        "localTime": 15108
+        "localTime": 15583
     }, 
     {
         "skeletons": [
@@ -1077,7 +1095,7 @@
         ], 
         "timestamp": 32042651085415, 
         "timestamp_js": 1500040182932, 
-        "localTime": 15404
+        "localTime": 15879
     }, 
     {
         "skeletons": [
@@ -1095,7 +1113,7 @@
         ], 
         "timestamp": 32042654085521, 
         "timestamp_js": 1500040183202, 
-        "localTime": 15674
+        "localTime": 16149
     }, 
     {
         "skeletons": [
@@ -1113,7 +1131,7 @@
         ], 
         "timestamp": 32042656426131, 
         "timestamp_js": 1500040183438, 
-        "localTime": 15910
+        "localTime": 16385
     }, 
     {
         "skeletons": [
@@ -1131,7 +1149,7 @@
         ], 
         "timestamp": 32042658755694, 
         "timestamp_js": 1500040183662, 
-        "localTime": 16134
+        "localTime": 16609
     }, 
     {
         "skeletons": [
@@ -1149,7 +1167,7 @@
         ], 
         "timestamp": 32042661755529, 
         "timestamp_js": 1500040183839, 
-        "localTime": 16311
+        "localTime": 16786
     }, 
     {
         "skeletons": [
@@ -1167,7 +1185,7 @@
         ], 
         "timestamp": 32042662755383, 
         "timestamp_js": 1500040184015, 
-        "localTime": 16487
+        "localTime": 16962
     }, 
     {
         "skeletons": [
@@ -1185,7 +1203,7 @@
         ], 
         "timestamp": 32042665426305, 
         "timestamp_js": 1500040184271, 
-        "localTime": 16743
+        "localTime": 17218
     }, 
     {
         "skeletons": [
@@ -1203,7 +1221,7 @@
         ], 
         "timestamp": 32042667085259, 
         "timestamp_js": 1500040184511, 
-        "localTime": 16983
+        "localTime": 17458
     }, 
     {
         "skeletons": [
@@ -1221,7 +1239,7 @@
         ], 
         "timestamp": 32042671085331, 
         "timestamp_js": 1500040184829, 
-        "localTime": 17301
+        "localTime": 17776
     }, 
     {
         "skeletons": [
@@ -1239,7 +1257,7 @@
         ], 
         "timestamp": 32042673426034, 
         "timestamp_js": 1500040185118, 
-        "localTime": 17590
+        "localTime": 18065
     }, 
     {
         "skeletons": [
@@ -1257,7 +1275,7 @@
         ], 
         "timestamp": 32042675755666, 
         "timestamp_js": 1500040185310, 
-        "localTime": 17782
+        "localTime": 18257
     }, 
     {
         "skeletons": [
@@ -1275,7 +1293,7 @@
         ], 
         "timestamp": 32042679426027, 
         "timestamp_js": 1500040185669, 
-        "localTime": 18141
+        "localTime": 18616
     }, 
     {
         "skeletons": [
@@ -1293,7 +1311,7 @@
         ], 
         "timestamp": 32042681426350, 
         "timestamp_js": 1500040185934, 
-        "localTime": 18406
+        "localTime": 18881
     }, 
     {
         "skeletons": [
@@ -1311,7 +1329,7 @@
         ], 
         "timestamp": 32042684085311, 
         "timestamp_js": 1500040186176, 
-        "localTime": 18648
+        "localTime": 19123
     }, 
     {
         "skeletons": [
@@ -1329,7 +1347,7 @@
         ], 
         "timestamp": 32042686426028, 
         "timestamp_js": 1500040186350, 
-        "localTime": 18822
+        "localTime": 19297
     }, 
     {
         "skeletons": [
@@ -1347,7 +1365,7 @@
         ], 
         "timestamp": 32042688085192, 
         "timestamp_js": 1500040186546, 
-        "localTime": 19018
+        "localTime": 19493
     }, 
     {
         "skeletons": [
@@ -1365,7 +1383,7 @@
         ], 
         "timestamp": 32042691426024, 
         "timestamp_js": 1500040186936, 
-        "localTime": 19408
+        "localTime": 19883
     }, 
     {
         "skeletons": [
@@ -1383,7 +1401,7 @@
         ], 
         "timestamp": 32042694085171, 
         "timestamp_js": 1500040187183, 
-        "localTime": 19655
+        "localTime": 20130
     }, 
     {
         "skeletons": [
@@ -1401,7 +1419,7 @@
         ], 
         "timestamp": 32042696426112, 
         "timestamp_js": 1500040187364, 
-        "localTime": 19836
+        "localTime": 20311
     }, 
     {
         "skeletons": [
@@ -1419,7 +1437,7 @@
         ], 
         "timestamp": 32042698426225, 
         "timestamp_js": 1500040187525, 
-        "localTime": 19997
+        "localTime": 20472
     }, 
     {
         "skeletons": [
@@ -1437,7 +1455,7 @@
         ], 
         "timestamp": 32042699755174, 
         "timestamp_js": 1500040187799, 
-        "localTime": 20271
+        "localTime": 20746
     }, 
     {
         "skeletons": [
@@ -1455,7 +1473,7 @@
         ], 
         "timestamp": 32042702755527, 
         "timestamp_js": 1500040187985, 
-        "localTime": 20457
+        "localTime": 20932
     }, 
     {
         "skeletons": [
@@ -1473,7 +1491,7 @@
         ], 
         "timestamp": 32042706755212, 
         "timestamp_js": 1500040188423, 
-        "localTime": 20895
+        "localTime": 21370
     }, 
     {
         "skeletons": [
@@ -1491,7 +1509,7 @@
         ], 
         "timestamp": 32042708755171, 
         "timestamp_js": 1500040188566, 
-        "localTime": 21038
+        "localTime": 21513
     }, 
     {
         "skeletons": [
@@ -1509,7 +1527,7 @@
         ], 
         "timestamp": 32042710426026, 
         "timestamp_js": 1500040188787, 
-        "localTime": 21259
+        "localTime": 21734
     }, 
     {
         "skeletons": [
@@ -1527,7 +1545,7 @@
         ], 
         "timestamp": 32042712755364, 
         "timestamp_js": 1500040188996, 
-        "localTime": 21468
+        "localTime": 21943
     }, 
     {
         "skeletons": [
@@ -1545,7 +1563,7 @@
         ], 
         "timestamp": 32042716085018, 
         "timestamp_js": 1500040189380, 
-        "localTime": 21852
+        "localTime": 22327
     }, 
     {
         "skeletons": [
@@ -1563,7 +1581,7 @@
         ], 
         "timestamp": 32042718425759, 
         "timestamp_js": 1500040189540, 
-        "localTime": 22012
+        "localTime": 22487
     }, 
     {
         "skeletons": [
@@ -1581,7 +1599,7 @@
         ], 
         "timestamp": 32042721426014, 
         "timestamp_js": 1500040189837, 
-        "localTime": 22309
+        "localTime": 22784
     }, 
     {
         "skeletons": [
@@ -1599,7 +1617,7 @@
         ], 
         "timestamp": 32042723085117, 
         "timestamp_js": 1500040190001, 
-        "localTime": 22473
+        "localTime": 22948
     }, 
     {
         "skeletons": [
@@ -1617,7 +1635,7 @@
         ], 
         "timestamp": 32042724755071, 
         "timestamp_js": 1500040190214, 
-        "localTime": 22686
+        "localTime": 23161
     }, 
     {
         "skeletons": [
@@ -1635,7 +1653,7 @@
         ], 
         "timestamp": 32042728425913, 
         "timestamp_js": 1500040190548, 
-        "localTime": 23020
+        "localTime": 23495
     }, 
     {
         "skeletons": [
@@ -1653,7 +1671,7 @@
         ], 
         "timestamp": 32042730085025, 
         "timestamp_js": 1500040190764, 
-        "localTime": 23236
+        "localTime": 23711
     }, 
     {
         "skeletons": [
@@ -1671,7 +1689,7 @@
         ], 
         "timestamp": 32042732426614, 
         "timestamp_js": 1500040190965, 
-        "localTime": 23437
+        "localTime": 23912
     }, 
     {
         "skeletons": [
@@ -1689,7 +1707,7 @@
         ], 
         "timestamp": 32042734425878, 
         "timestamp_js": 1500040191200, 
-        "localTime": 23672
+        "localTime": 24147
     }, 
     {
         "skeletons": [
@@ -1707,7 +1725,7 @@
         ], 
         "timestamp": 32042738084977, 
         "timestamp_js": 1500040191535, 
-        "localTime": 24007
+        "localTime": 24482
     }, 
     {
         "skeletons": [
@@ -1725,7 +1743,7 @@
         ], 
         "timestamp": 32042740084885, 
         "timestamp_js": 1500040191725, 
-        "localTime": 24197
+        "localTime": 24672
     }, 
     {
         "skeletons": [
@@ -1743,7 +1761,7 @@
         ], 
         "timestamp": 32042744085395, 
         "timestamp_js": 1500040192061, 
-        "localTime": 24533
+        "localTime": 25008
     }, 
     {
         "skeletons": [
@@ -1761,7 +1779,7 @@
         ], 
         "timestamp": 32042745425811, 
         "timestamp_js": 1500040192303, 
-        "localTime": 24775
+        "localTime": 25250
     }, 
     {
         "skeletons": [
@@ -1779,7 +1797,7 @@
         ], 
         "timestamp": 32042747754912, 
         "timestamp_js": 1500040192562, 
-        "localTime": 25034
+        "localTime": 25509
     }, 
     {
         "skeletons": [
@@ -1797,7 +1815,7 @@
         ], 
         "timestamp": 32042750425834, 
         "timestamp_js": 1500040192773, 
-        "localTime": 25245
+        "localTime": 25720
     }, 
     {
         "skeletons": [
@@ -1815,7 +1833,7 @@
         ], 
         "timestamp": 32042752425714, 
         "timestamp_js": 1500040193000, 
-        "localTime": 25472
+        "localTime": 25947
     }, 
     {
         "skeletons": [
@@ -1833,7 +1851,7 @@
         ], 
         "timestamp": 32042756084953, 
         "timestamp_js": 1500040193428, 
-        "localTime": 25900
+        "localTime": 26375
     }, 
     {
         "skeletons": [
@@ -1851,7 +1869,7 @@
         ], 
         "timestamp": 32042759085358, 
         "timestamp_js": 1500040193622, 
-        "localTime": 26094
+        "localTime": 26569
     }, 
     {
         "skeletons": [
@@ -1869,7 +1887,7 @@
         ], 
         "timestamp": 32042761085373, 
         "timestamp_js": 1500040193808, 
-        "localTime": 26280
+        "localTime": 26755
     }, 
     {
         "skeletons": [
@@ -1887,7 +1905,7 @@
         ], 
         "timestamp": 32042762755014, 
         "timestamp_js": 1500040193962, 
-        "localTime": 26434
+        "localTime": 26909
     }, 
     {
         "skeletons": [
@@ -1905,7 +1923,7 @@
         ], 
         "timestamp": 32042766425711, 
         "timestamp_js": 1500040194352, 
-        "localTime": 26824
+        "localTime": 27299
     }, 
     {
         "skeletons": [
@@ -1923,7 +1941,7 @@
         ], 
         "timestamp": 32042768084991, 
         "timestamp_js": 1500040194501, 
-        "localTime": 26973
+        "localTime": 27448
     }, 
     {
         "skeletons": [
@@ -1941,7 +1959,7 @@
         ], 
         "timestamp": 32042769425724, 
         "timestamp_js": 1500040194730, 
-        "localTime": 27202
+        "localTime": 27677
     }, 
     {
         "skeletons": [
@@ -1959,7 +1977,7 @@
         ], 
         "timestamp": 32042772084988, 
         "timestamp_js": 1500040194968, 
-        "localTime": 27440
+        "localTime": 27915
     }, 
     {
         "skeletons": [
@@ -1977,7 +1995,7 @@
         ], 
         "timestamp": 32042776084897, 
         "timestamp_js": 1500040195353, 
-        "localTime": 27825
+        "localTime": 28300
     }, 
     {
         "skeletons": [
@@ -1995,7 +2013,7 @@
         ], 
         "timestamp": 32042777425742, 
         "timestamp_js": 1500040195508, 
-        "localTime": 27980
+        "localTime": 28455
     }, 
     {
         "skeletons": [
@@ -2013,7 +2031,7 @@
         ], 
         "timestamp": 32042779755253, 
         "timestamp_js": 1500040195770, 
-        "localTime": 28242
+        "localTime": 28717
     }, 
     {
         "skeletons": [
@@ -2031,7 +2049,7 @@
         ], 
         "timestamp": 32042784084971, 
         "timestamp_js": 1500040196185, 
-        "localTime": 28657
+        "localTime": 29132
     }, 
     {
         "skeletons": [
@@ -2049,7 +2067,7 @@
         ], 
         "timestamp": 32042786426014, 
         "timestamp_js": 1500040196366, 
-        "localTime": 28838
+        "localTime": 29313
     }, 
     {
         "skeletons": [
@@ -2067,7 +2085,7 @@
         ], 
         "timestamp": 32042788425633, 
         "timestamp_js": 1500040196626, 
-        "localTime": 29098
+        "localTime": 29573
     }, 
     {
         "skeletons": [
@@ -2085,7 +2103,7 @@
         ], 
         "timestamp": 32042791084906, 
         "timestamp_js": 1500040196828, 
-        "localTime": 29300
+        "localTime": 29775
     }, 
     {
         "skeletons": [
@@ -2103,7 +2121,7 @@
         ], 
         "timestamp": 32042793084930, 
         "timestamp_js": 1500040196985, 
-        "localTime": 29457
+        "localTime": 29932
     }, 
     {
         "skeletons": [
@@ -2121,7 +2139,7 @@
         ], 
         "timestamp": 32042794425808, 
         "timestamp_js": 1500040197229, 
-        "localTime": 29701
+        "localTime": 30176
     }, 
     {
         "skeletons": [
@@ -2139,7 +2157,7 @@
         ], 
         "timestamp": 32042796754736, 
         "timestamp_js": 1500040197472, 
-        "localTime": 29944
+        "localTime": 30419
     }, 
     {
         "skeletons": [
@@ -2157,7 +2175,7 @@
         ], 
         "timestamp": 32042801084803, 
         "timestamp_js": 1500040197814, 
-        "localTime": 30286
+        "localTime": 30761
     }, 
     {
         "skeletons": [
@@ -2175,7 +2193,7 @@
         ], 
         "timestamp": 32042802754683, 
         "timestamp_js": 1500040197952, 
-        "localTime": 30424
+        "localTime": 30899
     }, 
     {
         "skeletons": [
@@ -2193,7 +2211,7 @@
         ], 
         "timestamp": 32042805425508, 
         "timestamp_js": 1500040198341, 
-        "localTime": 30813
+        "localTime": 31288
     }, 
     {
         "skeletons": [
@@ -2222,7 +2240,7 @@
         ], 
         "timestamp": 32042808084762, 
         "timestamp_js": 1500040198571, 
-        "localTime": 31043
+        "localTime": 31518
     }, 
     {
         "skeletons": [
@@ -2251,7 +2269,7 @@
         ], 
         "timestamp": 32042811084803, 
         "timestamp_js": 1500040198936, 
-        "localTime": 31408
+        "localTime": 31883
     }, 
     {
         "skeletons": [
@@ -2280,7 +2298,7 @@
         ], 
         "timestamp": 32042813755176, 
         "timestamp_js": 1500040199187, 
-        "localTime": 31659
+        "localTime": 32134
     }, 
     {
         "skeletons": [
@@ -2309,7 +2327,7 @@
         ], 
         "timestamp": 32042816084701, 
         "timestamp_js": 1500040199382, 
-        "localTime": 31854
+        "localTime": 32329
     }, 
     {
         "skeletons": [
@@ -2338,7 +2356,7 @@
         ], 
         "timestamp": 32042818425628, 
         "timestamp_js": 1500040199598, 
-        "localTime": 32070
+        "localTime": 32545
     }, 
     {
         "skeletons": [
@@ -2367,7 +2385,7 @@
         ], 
         "timestamp": 32042821425557, 
         "timestamp_js": 1500040199856, 
-        "localTime": 32328
+        "localTime": 32803
     }, 
     {
         "skeletons": [
@@ -2396,7 +2414,7 @@
         ], 
         "timestamp": 32042823084716, 
         "timestamp_js": 1500040200042, 
-        "localTime": 32514
+        "localTime": 32989
     }, 
     {
         "skeletons": [
@@ -2425,7 +2443,7 @@
         ], 
         "timestamp": 32042825084693, 
         "timestamp_js": 1500040200229, 
-        "localTime": 32701
+        "localTime": 33176
     }, 
     {
         "skeletons": [
@@ -2454,7 +2472,7 @@
         ], 
         "timestamp": 32042827425546, 
         "timestamp_js": 1500040200467, 
-        "localTime": 32939
+        "localTime": 33414
     }, 
     {
         "skeletons": [
@@ -2483,7 +2501,7 @@
         ], 
         "timestamp": 32042831425413, 
         "timestamp_js": 1500040200872, 
-        "localTime": 33344
+        "localTime": 33819
     }, 
     {
         "skeletons": [
@@ -2512,7 +2530,7 @@
         ], 
         "timestamp": 32042833084814, 
         "timestamp_js": 1500040201000, 
-        "localTime": 33472
+        "localTime": 33947
     }, 
     {
         "skeletons": [
@@ -2541,7 +2559,7 @@
         ], 
         "timestamp": 32042834425692, 
         "timestamp_js": 1500040201229, 
-        "localTime": 33701
+        "localTime": 34176
     }, 
     {
         "skeletons": [
@@ -2570,7 +2588,7 @@
         ], 
         "timestamp": 32042836755007, 
         "timestamp_js": 1500040201459, 
-        "localTime": 33931
+        "localTime": 34406
     }, 
     {
         "skeletons": [
@@ -2599,7 +2617,7 @@
         ], 
         "timestamp": 32042841084608, 
         "timestamp_js": 1500040201812, 
-        "localTime": 34284
+        "localTime": 34759
     }, 
     {
         "skeletons": [
@@ -2628,7 +2646,7 @@
         ], 
         "timestamp": 32042842754571, 
         "timestamp_js": 1500040202054, 
-        "localTime": 34526
+        "localTime": 35001
     }, 
     {
         "skeletons": [
@@ -2657,7 +2675,7 @@
         ], 
         "timestamp": 32042845084684, 
         "timestamp_js": 1500040202302, 
-        "localTime": 34774
+        "localTime": 35249
     }, 
     {
         "skeletons": [
@@ -2686,7 +2704,7 @@
         ], 
         "timestamp": 32042847754786, 
         "timestamp_js": 1500040202513, 
-        "localTime": 34985
+        "localTime": 35460
     }, 
     {
         "skeletons": [
@@ -2715,7 +2733,7 @@
         ], 
         "timestamp": 32042849754717, 
         "timestamp_js": 1500040202804, 
-        "localTime": 35276
+        "localTime": 35751
     }, 
     {
         "skeletons": [
@@ -2744,7 +2762,7 @@
         ], 
         "timestamp": 32042852425742, 
         "timestamp_js": 1500040203061, 
-        "localTime": 35533
+        "localTime": 36008
     }, 
     {
         "skeletons": [
@@ -2773,7 +2791,7 @@
         ], 
         "timestamp": 32042855425634, 
         "timestamp_js": 1500040203293, 
-        "localTime": 35765
+        "localTime": 36240
     }, 
     {
         "skeletons": [
@@ -2802,7 +2820,7 @@
         ], 
         "timestamp": 32042857754646, 
         "timestamp_js": 1500040203532, 
-        "localTime": 36004
+        "localTime": 36479
     }, 
     {
         "skeletons": [
@@ -2831,7 +2849,7 @@
         ], 
         "timestamp": 32042860084563, 
         "timestamp_js": 1500040203814, 
-        "localTime": 36286
+        "localTime": 36761
     }, 
     {
         "skeletons": [
@@ -2860,7 +2878,7 @@
         ], 
         "timestamp": 32042862754720, 
         "timestamp_js": 1500040204039, 
-        "localTime": 36511
+        "localTime": 36986
     }, 
     {
         "skeletons": [
@@ -2889,7 +2907,7 @@
         ], 
         "timestamp": 32042865084777, 
         "timestamp_js": 1500040204274, 
-        "localTime": 36746
+        "localTime": 37221
     }, 
     {
         "skeletons": [
@@ -2918,7 +2936,7 @@
         ], 
         "timestamp": 32042867425341, 
         "timestamp_js": 1500040204521, 
-        "localTime": 36993
+        "localTime": 37468
     }, 
     {
         "skeletons": [
@@ -2947,7 +2965,7 @@
         ], 
         "timestamp": 32042869754553, 
         "timestamp_js": 1500040204778, 
-        "localTime": 37250
+        "localTime": 37725
     }, 
     {
         "skeletons": [
@@ -2976,7 +2994,7 @@
         ], 
         "timestamp": 32042872425845, 
         "timestamp_js": 1500040205020, 
-        "localTime": 37492
+        "localTime": 37967
     }, 
     {
         "skeletons": [
@@ -3005,7 +3023,7 @@
         ], 
         "timestamp": 32042874754502, 
         "timestamp_js": 1500040205212, 
-        "localTime": 37684
+        "localTime": 38159
     }, 
     {
         "skeletons": [
@@ -3034,7 +3052,7 @@
         ], 
         "timestamp": 32042878425246, 
         "timestamp_js": 1500040205614, 
-        "localTime": 38086
+        "localTime": 38561
     }, 
     {
         "skeletons": [
@@ -3063,7 +3081,7 @@
         ], 
         "timestamp": 32042880754467, 
         "timestamp_js": 1500040205809, 
-        "localTime": 38281
+        "localTime": 38756
     }, 
     {
         "skeletons": [
@@ -3092,7 +3110,7 @@
         ], 
         "timestamp": 32042882754870, 
         "timestamp_js": 1500040206076, 
-        "localTime": 38548
+        "localTime": 39023
     }, 
     {
         "skeletons": [
@@ -3121,7 +3139,7 @@
         ], 
         "timestamp": 32042885425092, 
         "timestamp_js": 1500040206228, 
-        "localTime": 38700
+        "localTime": 39175
     }, 
     {
         "skeletons": [
@@ -3150,7 +3168,7 @@
         ], 
         "timestamp": 32042888754513, 
         "timestamp_js": 1500040206743, 
-        "localTime": 39215
+        "localTime": 39690
     }, 
     {
         "skeletons": [
@@ -3179,7 +3197,7 @@
         ], 
         "timestamp": 32042892084489, 
         "timestamp_js": 1500040206931, 
-        "localTime": 39403
+        "localTime": 39878
     }, 
     {
         "skeletons": [
@@ -3208,7 +3226,7 @@
         ], 
         "timestamp": 32042894085848, 
         "timestamp_js": 1500040207133, 
-        "localTime": 39605
+        "localTime": 40080
     }, 
     {
         "skeletons": [
@@ -3237,7 +3255,7 @@
         ], 
         "timestamp": 32042896084430, 
         "timestamp_js": 1500040207367, 
-        "localTime": 39839
+        "localTime": 40314
     }, 
     {
         "skeletons": [
@@ -3266,7 +3284,7 @@
         ], 
         "timestamp": 32042898425483, 
         "timestamp_js": 1500040207556, 
-        "localTime": 40028
+        "localTime": 40503
     }, 
     {
         "skeletons": [
@@ -3295,7 +3313,7 @@
         ], 
         "timestamp": 32042900425181, 
         "timestamp_js": 1500040207858, 
-        "localTime": 40330
+        "localTime": 40805
     }, 
     {
         "skeletons": [
@@ -3324,7 +3342,7 @@
         ], 
         "timestamp": 32042903084483, 
         "timestamp_js": 1500040208038, 
-        "localTime": 40510
+        "localTime": 40985
     }, 
     {
         "skeletons": [
@@ -3353,7 +3371,7 @@
         ], 
         "timestamp": 32042905084581, 
         "timestamp_js": 1500040208197, 
-        "localTime": 40669
+        "localTime": 41144
     }, 
     {
         "skeletons": [
@@ -3382,7 +3400,7 @@
         ], 
         "timestamp": 32042908754243, 
         "timestamp_js": 1500040208659, 
-        "localTime": 41131
+        "localTime": 41606
     }, 
     {
         "skeletons": [
@@ -3411,7 +3429,7 @@
         ], 
         "timestamp": 32042911084379, 
         "timestamp_js": 1500040208894, 
-        "localTime": 41366
+        "localTime": 41841
     }, 
     {
         "skeletons": [
@@ -3440,7 +3458,7 @@
         ], 
         "timestamp": 32042913425483, 
         "timestamp_js": 1500040209081, 
-        "localTime": 41553
+        "localTime": 42028
     }, 
     {
         "skeletons": [
@@ -3469,7 +3487,7 @@
         ], 
         "timestamp": 32042915425554, 
         "timestamp_js": 1500040209240, 
-        "localTime": 41712
+        "localTime": 42187
     }, 
     {
         "skeletons": [
@@ -3498,7 +3516,7 @@
         ], 
         "timestamp": 32042916754419, 
         "timestamp_js": 1500040209442, 
-        "localTime": 41914
+        "localTime": 42389
     }, 
     {
         "skeletons": [
@@ -3527,7 +3545,7 @@
         ], 
         "timestamp": 32042921754386, 
         "timestamp_js": 1500040209862, 
-        "localTime": 42334
+        "localTime": 42809
     }, 
     {
         "skeletons": [
@@ -3556,7 +3574,7 @@
         ], 
         "timestamp": 32042923084207, 
         "timestamp_js": 1500040210129, 
-        "localTime": 42601
+        "localTime": 43076
     }, 
     {
         "skeletons": [
@@ -3585,7 +3603,7 @@
         ], 
         "timestamp": 32042926425198, 
         "timestamp_js": 1500040210327, 
-        "localTime": 42799
+        "localTime": 43274
     }, 
     {
         "skeletons": [
@@ -3614,7 +3632,7 @@
         ], 
         "timestamp": 32042928425264, 
         "timestamp_js": 1500040210607, 
-        "localTime": 43079
+        "localTime": 43554
     }, 
     {
         "skeletons": [
@@ -3643,7 +3661,7 @@
         ], 
         "timestamp": 32042930425148, 
         "timestamp_js": 1500040210850, 
-        "localTime": 43322
+        "localTime": 43797
     }, 
     {
         "skeletons": [
@@ -3661,7 +3679,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 57, 
                     "y": 115, 
@@ -3672,7 +3690,7 @@
         ], 
         "timestamp": 32042932754361, 
         "timestamp_js": 1500040211045, 
-        "localTime": 43517
+        "localTime": 43992
     }, 
     {
         "skeletons": [
@@ -3690,7 +3708,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 45, 
                     "y": 106, 
@@ -3701,7 +3719,7 @@
         ], 
         "timestamp": 32042936425002, 
         "timestamp_js": 1500040211397, 
-        "localTime": 43869
+        "localTime": 44344
     }, 
     {
         "skeletons": [
@@ -3719,7 +3737,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 44, 
                     "y": 105, 
@@ -3730,7 +3748,7 @@
         ], 
         "timestamp": 32042938425120, 
         "timestamp_js": 1500040211617, 
-        "localTime": 44089
+        "localTime": 44564
     }, 
     {
         "skeletons": [
@@ -3748,7 +3766,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 54, 
                     "y": 105, 
@@ -3759,7 +3777,7 @@
         ], 
         "timestamp": 32042940754281, 
         "timestamp_js": 1500040211932, 
-        "localTime": 44404
+        "localTime": 44879
     }, 
     {
         "skeletons": [
@@ -3777,7 +3795,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 62, 
                     "y": 96, 
@@ -3788,7 +3806,7 @@
         ], 
         "timestamp": 32042944084252, 
         "timestamp_js": 1500040212197, 
-        "localTime": 44669
+        "localTime": 45144
     }, 
     {
         "skeletons": [
@@ -3806,7 +3824,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 61, 
                     "y": 98, 
@@ -3817,7 +3835,7 @@
         ], 
         "timestamp": 32042946425324, 
         "timestamp_js": 1500040212429, 
-        "localTime": 44901
+        "localTime": 45376
     }, 
     {
         "skeletons": [
@@ -3835,7 +3853,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 59, 
                     "y": 103, 
@@ -3846,7 +3864,7 @@
         ], 
         "timestamp": 32042950084194, 
         "timestamp_js": 1500040212765, 
-        "localTime": 45237
+        "localTime": 45712
     }, 
     {
         "skeletons": [
@@ -3864,7 +3882,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 58, 
                     "y": 105, 
@@ -3875,7 +3893,7 @@
         ], 
         "timestamp": 32042952425079, 
         "timestamp_js": 1500040213043, 
-        "localTime": 45515
+        "localTime": 45990
     }, 
     {
         "skeletons": [
@@ -3893,7 +3911,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 55, 
                     "y": 103, 
@@ -3904,7 +3922,7 @@
         ], 
         "timestamp": 32042955084329, 
         "timestamp_js": 1500040213296, 
-        "localTime": 45768
+        "localTime": 46243
     }, 
     {
         "skeletons": [
@@ -3922,7 +3940,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 57, 
                     "y": 105, 
@@ -3933,7 +3951,7 @@
         ], 
         "timestamp": 32042957084130, 
         "timestamp_js": 1500040213495, 
-        "localTime": 45967
+        "localTime": 46442
     }, 
     {
         "skeletons": [
@@ -3951,7 +3969,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 58, 
                     "y": 106, 
@@ -3962,7 +3980,7 @@
         ], 
         "timestamp": 32042960084134, 
         "timestamp_js": 1500040213711, 
-        "localTime": 46183
+        "localTime": 46658
     }, 
     {
         "skeletons": [
@@ -3980,7 +3998,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 54, 
                     "y": 106, 
@@ -3991,7 +4009,7 @@
         ], 
         "timestamp": 32042961754251, 
         "timestamp_js": 1500040213958, 
-        "localTime": 46430
+        "localTime": 46905
     }, 
     {
         "skeletons": [
@@ -4009,7 +4027,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 55, 
                     "y": 106, 
@@ -4020,7 +4038,7 @@
         ], 
         "timestamp": 32042964425136, 
         "timestamp_js": 1500040214142, 
-        "localTime": 46614
+        "localTime": 47089
     }, 
     {
         "skeletons": [
@@ -4038,7 +4056,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 55, 
                     "y": 105, 
@@ -4049,7 +4067,7 @@
         ], 
         "timestamp": 32042966084421, 
         "timestamp_js": 1500040214419, 
-        "localTime": 46891
+        "localTime": 47366
     }, 
     {
         "skeletons": [
@@ -4067,7 +4085,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 59, 
                     "y": 105, 
@@ -4078,7 +4096,7 @@
         ], 
         "timestamp": 32042968425148, 
         "timestamp_js": 1500040214578, 
-        "localTime": 47050
+        "localTime": 47525
     }, 
     {
         "skeletons": [
@@ -4096,7 +4114,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 56, 
                     "y": 102, 
@@ -4107,7 +4125,7 @@
         ], 
         "timestamp": 32042970425004, 
         "timestamp_js": 1500040214742, 
-        "localTime": 47214
+        "localTime": 47689
     }, 
     {
         "skeletons": [
@@ -4125,7 +4143,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 58, 
                     "y": 103, 
@@ -4136,7 +4154,7 @@
         ], 
         "timestamp": 32042974084117, 
         "timestamp_js": 1500040215074, 
-        "localTime": 47546
+        "localTime": 48021
     }, 
     {
         "skeletons": [
@@ -4154,7 +4172,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 56, 
                     "y": 102, 
@@ -4165,7 +4183,7 @@
         ], 
         "timestamp": 32042975424971, 
         "timestamp_js": 1500040215301, 
-        "localTime": 47773
+        "localTime": 48248
     }, 
     {
         "skeletons": [
@@ -4183,7 +4201,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 59, 
                     "y": 104, 
@@ -4194,7 +4212,7 @@
         ], 
         "timestamp": 32042977424809, 
         "timestamp_js": 1500040215537, 
-        "localTime": 48009
+        "localTime": 48484
     }, 
     {
         "skeletons": [
@@ -4212,7 +4230,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 59, 
                     "y": 104, 
@@ -4223,7 +4241,7 @@
         ], 
         "timestamp": 32042980084082, 
         "timestamp_js": 1500040215760, 
-        "localTime": 48232
+        "localTime": 48707
     }, 
     {
         "skeletons": [
@@ -4241,7 +4259,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 59, 
                     "y": 104, 
@@ -4252,7 +4270,7 @@
         ], 
         "timestamp": 32042982424846, 
         "timestamp_js": 1500040215973, 
-        "localTime": 48445
+        "localTime": 48920
     }, 
     {
         "skeletons": [
@@ -4270,7 +4288,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 63, 
                     "y": 103, 
@@ -4281,7 +4299,7 @@
         ], 
         "timestamp": 32042986424923, 
         "timestamp_js": 1500040216403, 
-        "localTime": 48875
+        "localTime": 49350
     }, 
     {
         "skeletons": [
@@ -4299,7 +4317,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 61, 
                     "y": 102, 
@@ -4310,7 +4328,7 @@
         ], 
         "timestamp": 32042988425101, 
         "timestamp_js": 1500040216544, 
-        "localTime": 49016
+        "localTime": 49491
     }, 
     {
         "skeletons": [
@@ -4328,7 +4346,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 63, 
                     "y": 103, 
@@ -4339,7 +4357,7 @@
         ], 
         "timestamp": 32042990084371, 
         "timestamp_js": 1500040216823, 
-        "localTime": 49295
+        "localTime": 49770
     }, 
     {
         "skeletons": [
@@ -4357,7 +4375,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 63, 
                     "y": 104, 
@@ -4368,7 +4386,7 @@
         ], 
         "timestamp": 32042992754109, 
         "timestamp_js": 1500040217075, 
-        "localTime": 49547
+        "localTime": 50022
     }, 
     {
         "skeletons": [
@@ -4386,7 +4404,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 62, 
                     "y": 103, 
@@ -4397,7 +4415,7 @@
         ], 
         "timestamp": 32042995425139, 
         "timestamp_js": 1500040217322, 
-        "localTime": 49794
+        "localTime": 50269
     }, 
     {
         "skeletons": [
@@ -4415,7 +4433,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 58, 
                     "y": 102, 
@@ -4426,7 +4444,7 @@
         ], 
         "timestamp": 32042998084226, 
         "timestamp_js": 1500040217575, 
-        "localTime": 50047
+        "localTime": 50522
     }, 
     {
         "skeletons": [
@@ -4444,7 +4462,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 61, 
                     "y": 102, 
@@ -4455,7 +4473,7 @@
         ], 
         "timestamp": 32043000425092, 
         "timestamp_js": 1500040217798, 
-        "localTime": 50270
+        "localTime": 50745
     }, 
     {
         "skeletons": [
@@ -4473,7 +4491,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 63, 
                     "y": 103, 
@@ -4484,7 +4502,7 @@
         ], 
         "timestamp": 32043002753941, 
         "timestamp_js": 1500040218024, 
-        "localTime": 50496
+        "localTime": 50971
     }, 
     {
         "skeletons": [
@@ -4502,7 +4520,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 62, 
                     "y": 100, 
@@ -4513,7 +4531,7 @@
         ], 
         "timestamp": 32043006424867, 
         "timestamp_js": 1500040218359, 
-        "localTime": 50831
+        "localTime": 51306
     }, 
     {
         "skeletons": [
@@ -4531,7 +4549,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 65, 
                     "y": 102, 
@@ -4542,7 +4560,7 @@
         ], 
         "timestamp": 32043008424896, 
         "timestamp_js": 1500040218553, 
-        "localTime": 51025
+        "localTime": 51500
     }, 
     {
         "skeletons": [
@@ -4560,7 +4578,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 63, 
                     "y": 100, 
@@ -4571,7 +4589,7 @@
         ], 
         "timestamp": 32043010424752, 
         "timestamp_js": 1500040218755, 
-        "localTime": 51227
+        "localTime": 51702
     }, 
     {
         "skeletons": [
@@ -4589,7 +4607,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 63, 
                     "y": 100, 
@@ -4600,7 +4618,7 @@
         ], 
         "timestamp": 32043012084172, 
         "timestamp_js": 1500040218956, 
-        "localTime": 51428
+        "localTime": 51903
     }, 
     {
         "skeletons": [
@@ -4618,7 +4636,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 62, 
                     "y": 100, 
@@ -4629,7 +4647,7 @@
         ], 
         "timestamp": 32043014754227, 
         "timestamp_js": 1500040219190, 
-        "localTime": 51662
+        "localTime": 52137
     }, 
     {
         "skeletons": [
@@ -4647,7 +4665,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 64, 
                     "y": 102, 
@@ -4658,7 +4676,7 @@
         ], 
         "timestamp": 32043018083857, 
         "timestamp_js": 1500040219612, 
-        "localTime": 52084
+        "localTime": 52559
     }, 
     {
         "skeletons": [
@@ -4676,7 +4694,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 61, 
                     "y": 100, 
@@ -4687,7 +4705,7 @@
         ], 
         "timestamp": 32043021424619, 
         "timestamp_js": 1500040219873, 
-        "localTime": 52345
+        "localTime": 52820
     }, 
     {
         "skeletons": [
@@ -4705,7 +4723,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 65, 
                     "y": 103, 
@@ -4716,7 +4734,7 @@
         ], 
         "timestamp": 32043023425078, 
         "timestamp_js": 1500040220124, 
-        "localTime": 52596
+        "localTime": 53071
     }, 
     {
         "skeletons": [
@@ -4734,7 +4752,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 64, 
                     "y": 103, 
@@ -4745,7 +4763,7 @@
         ], 
         "timestamp": 32043025753824, 
         "timestamp_js": 1500040220255, 
-        "localTime": 52727
+        "localTime": 53202
     }, 
     {
         "skeletons": [
@@ -4763,7 +4781,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 63, 
                     "y": 103, 
@@ -4774,7 +4792,7 @@
         ], 
         "timestamp": 32043027083915, 
         "timestamp_js": 1500040220490, 
-        "localTime": 52962
+        "localTime": 53437
     }, 
     {
         "skeletons": [
@@ -4792,7 +4810,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 62, 
                     "y": 103, 
@@ -4803,7 +4821,7 @@
         ], 
         "timestamp": 32043029425080, 
         "timestamp_js": 1500040220775, 
-        "localTime": 53247
+        "localTime": 53722
     }, 
     {
         "skeletons": [
@@ -4821,7 +4839,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 61, 
                     "y": 103, 
@@ -4832,7 +4850,7 @@
         ], 
         "timestamp": 32043032084293, 
         "timestamp_js": 1500040221030, 
-        "localTime": 53502
+        "localTime": 53977
     }, 
     {
         "skeletons": [
@@ -4850,7 +4868,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 58, 
                     "y": 105, 
@@ -4861,7 +4879,7 @@
         ], 
         "timestamp": 32043035084297, 
         "timestamp_js": 1500040221267, 
-        "localTime": 53739
+        "localTime": 54214
     }, 
     {
         "skeletons": [
@@ -4879,7 +4897,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 56, 
                     "y": 105, 
@@ -4890,7 +4908,7 @@
         ], 
         "timestamp": 32043037425084, 
         "timestamp_js": 1500040221485, 
-        "localTime": 53957
+        "localTime": 54432
     }, 
     {
         "skeletons": [
@@ -4908,7 +4926,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 56, 
                     "y": 107, 
@@ -4919,7 +4937,7 @@
         ], 
         "timestamp": 32043039753993, 
         "timestamp_js": 1500040221727, 
-        "localTime": 54199
+        "localTime": 54674
     }, 
     {
         "skeletons": [
@@ -4937,7 +4955,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 55, 
                     "y": 108, 
@@ -4948,7 +4966,7 @@
         ], 
         "timestamp": 32043042083873, 
         "timestamp_js": 1500040221953, 
-        "localTime": 54425
+        "localTime": 54900
     }, 
     {
         "skeletons": [
@@ -4966,7 +4984,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 54, 
                     "y": 113, 
@@ -4977,7 +4995,7 @@
         ], 
         "timestamp": 32043046424451, 
         "timestamp_js": 1500040222359, 
-        "localTime": 54831
+        "localTime": 55306
     }, 
     {
         "skeletons": [
@@ -4995,7 +5013,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 50, 
                     "y": 114, 
@@ -5006,7 +5024,7 @@
         ], 
         "timestamp": 32043048083876, 
         "timestamp_js": 1500040222545, 
-        "localTime": 55017
+        "localTime": 55492
     }, 
     {
         "skeletons": [
@@ -5024,7 +5042,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 49, 
                     "y": 118, 
@@ -5035,7 +5053,7 @@
         ], 
         "timestamp": 32043050753847, 
         "timestamp_js": 1500040222747, 
-        "localTime": 55219
+        "localTime": 55694
     }, 
     {
         "skeletons": [
@@ -5053,7 +5071,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 50, 
                     "y": 121, 
@@ -5064,7 +5082,7 @@
         ], 
         "timestamp": 32043054083800, 
         "timestamp_js": 1500040223107, 
-        "localTime": 55579
+        "localTime": 56054
     }, 
     {
         "skeletons": [
@@ -5082,7 +5100,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 53, 
                     "y": 127, 
@@ -5093,7 +5111,7 @@
         ], 
         "timestamp": 32043055753884, 
         "timestamp_js": 1500040223235, 
-        "localTime": 55707
+        "localTime": 56182
     }, 
     {
         "skeletons": [
@@ -5111,7 +5129,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 52, 
                     "y": 128, 
@@ -5122,7 +5140,7 @@
         ], 
         "timestamp": 32043057083920, 
         "timestamp_js": 1500040223473, 
-        "localTime": 55945
+        "localTime": 56420
     }, 
     {
         "skeletons": [
@@ -5140,7 +5158,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 51, 
                     "y": 134, 
@@ -5151,7 +5169,7 @@
         ], 
         "timestamp": 32043059424595, 
         "timestamp_js": 1500040223724, 
-        "localTime": 56196
+        "localTime": 56671
     }, 
     {
         "skeletons": [
@@ -5169,7 +5187,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 49, 
                     "y": 142, 
@@ -5180,7 +5198,7 @@
         ], 
         "timestamp": 32043062083841, 
         "timestamp_js": 1500040224013, 
-        "localTime": 56485
+        "localTime": 56960
     }, 
     {
         "skeletons": [
@@ -5198,7 +5216,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 47, 
                     "y": 142, 
@@ -5209,7 +5227,7 @@
         ], 
         "timestamp": 32043064753751, 
         "timestamp_js": 1500040224223, 
-        "localTime": 56695
+        "localTime": 57170
     }, 
     {
         "skeletons": [
@@ -5227,7 +5245,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 49, 
                     "y": 132, 
@@ -5238,7 +5256,7 @@
         ], 
         "timestamp": 32043069424595, 
         "timestamp_js": 1500040224680, 
-        "localTime": 57152
+        "localTime": 57627
     }, 
     {
         "skeletons": [
@@ -5256,7 +5274,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 55, 
                     "y": 128, 
@@ -5267,7 +5285,7 @@
         ], 
         "timestamp": 32043071424587, 
         "timestamp_js": 1500040224879, 
-        "localTime": 57351
+        "localTime": 57826
     }, 
     {
         "skeletons": [
@@ -5285,7 +5303,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 54, 
                     "y": 122, 
@@ -5296,7 +5314,7 @@
         ], 
         "timestamp": 32043073424644, 
         "timestamp_js": 1500040225122, 
-        "localTime": 57594
+        "localTime": 58069
     }, 
     {
         "skeletons": [
@@ -5314,7 +5332,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 57, 
                     "y": 118, 
@@ -5325,7 +5343,7 @@
         ], 
         "timestamp": 32043075424677, 
         "timestamp_js": 1500040225274, 
-        "localTime": 57746
+        "localTime": 58221
     }, 
     {
         "skeletons": [
@@ -5343,7 +5361,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 56, 
                     "y": 115, 
@@ -5354,7 +5372,7 @@
         ], 
         "timestamp": 32043077424538, 
         "timestamp_js": 1500040225478, 
-        "localTime": 57950
+        "localTime": 58425
     }, 
     {
         "skeletons": [
@@ -5372,7 +5390,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 57, 
                     "y": 115, 
@@ -5383,7 +5401,7 @@
         ], 
         "timestamp": 32043080083774, 
         "timestamp_js": 1500040225781, 
-        "localTime": 58253
+        "localTime": 58728
     }, 
     {
         "skeletons": [
@@ -5401,7 +5419,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 60, 
                     "y": 116, 
@@ -5412,7 +5430,7 @@
         ], 
         "timestamp": 32043082424520, 
         "timestamp_js": 1500040226030, 
-        "localTime": 58502
+        "localTime": 58977
     }, 
     {
         "skeletons": [
@@ -5430,7 +5448,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 58, 
                     "y": 117, 
@@ -5441,7 +5459,7 @@
         ], 
         "timestamp": 32043085084064, 
         "timestamp_js": 1500040226252, 
-        "localTime": 58724
+        "localTime": 59199
     }, 
     {
         "skeletons": [
@@ -5459,7 +5477,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 56, 
                     "y": 118, 
@@ -5470,7 +5488,7 @@
         ], 
         "timestamp": 32043087424384, 
         "timestamp_js": 1500040226444, 
-        "localTime": 58916
+        "localTime": 59391
     }, 
     {
         "skeletons": [
@@ -5488,7 +5506,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 56, 
                     "y": 121, 
@@ -5499,7 +5517,7 @@
         ], 
         "timestamp": 32043090753889, 
         "timestamp_js": 1500040226834, 
-        "localTime": 59306
+        "localTime": 59781
     }, 
     {
         "skeletons": [
@@ -5517,7 +5535,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 53, 
                     "y": 121, 
@@ -5528,7 +5546,7 @@
         ], 
         "timestamp": 32043093083787, 
         "timestamp_js": 1500040227049, 
-        "localTime": 59521
+        "localTime": 59996
     }, 
     {
         "skeletons": [
@@ -5546,7 +5564,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 56, 
                     "y": 122, 
@@ -5557,7 +5575,7 @@
         ], 
         "timestamp": 32043095083606, 
         "timestamp_js": 1500040227266, 
-        "localTime": 59738
+        "localTime": 60213
     }, 
     {
         "skeletons": [
@@ -5575,7 +5593,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 55, 
                     "y": 121, 
@@ -5586,7 +5604,7 @@
         ], 
         "timestamp": 32043097083715, 
         "timestamp_js": 1500040227600, 
-        "localTime": 60072
+        "localTime": 60547
     }, 
     {
         "skeletons": [
@@ -5604,7 +5622,7 @@
             {
                 "activity_tracked": 1, 
                 "id": 1, 
-                "activity": "standing", 
+                "activity": "phone", 
                 "head": {
                     "x": 54, 
                     "y": 125, 
@@ -5615,7 +5633,7 @@
         ], 
         "timestamp": 32043101753719, 
         "timestamp_js": 1500040227923, 
-        "localTime": 60395
+        "localTime": 60870
     }, 
     {
         "skeletons": [
@@ -5644,7 +5662,7 @@
         ], 
         "timestamp": 32043103754023, 
         "timestamp_js": 1500040228129, 
-        "localTime": 60601
+        "localTime": 61076
     }, 
     {
         "skeletons": [
@@ -5673,7 +5691,7 @@
         ], 
         "timestamp": 32043105753567, 
         "timestamp_js": 1500040228236, 
-        "localTime": 60708
+        "localTime": 61183
     }, 
     {
         "skeletons": [
@@ -5702,7 +5720,7 @@
         ], 
         "timestamp": 32043107083869, 
         "timestamp_js": 1500040228453, 
-        "localTime": 60925
+        "localTime": 61400
     }, 
     {
         "skeletons": [
@@ -5731,7 +5749,7 @@
         ], 
         "timestamp": 32043109083692, 
         "timestamp_js": 1500040228690, 
-        "localTime": 61162
+        "localTime": 61637
     }, 
     {
         "skeletons": [
@@ -5760,7 +5778,7 @@
         ], 
         "timestamp": 32043111424242, 
         "timestamp_js": 1500040228977, 
-        "localTime": 61449
+        "localTime": 61924
     }, 
     {
         "skeletons": [
@@ -5789,7 +5807,7 @@
         ], 
         "timestamp": 32043116424358, 
         "timestamp_js": 1500040229386, 
-        "localTime": 61858
+        "localTime": 62333
     }, 
     {
         "skeletons": [
@@ -5818,7 +5836,7 @@
         ], 
         "timestamp": 32043118424359, 
         "timestamp_js": 1500040229591, 
-        "localTime": 62063
+        "localTime": 62538
     }, 
     {
         "skeletons": [
@@ -5847,7 +5865,7 @@
         ], 
         "timestamp": 32043120083592, 
         "timestamp_js": 1500040229741, 
-        "localTime": 62213
+        "localTime": 62688
     }, 
     {
         "skeletons": [
@@ -5876,7 +5894,7 @@
         ], 
         "timestamp": 32043123753519, 
         "timestamp_js": 1500040230121, 
-        "localTime": 62593
+        "localTime": 63068
     }, 
     {
         "skeletons": [
@@ -5905,7 +5923,7 @@
         ], 
         "timestamp": 32043125753576, 
         "timestamp_js": 1500040230282, 
-        "localTime": 62754
+        "localTime": 63229
     }, 
     {
         "skeletons": [
@@ -5934,7 +5952,7 @@
         ], 
         "timestamp": 32043127424370, 
         "timestamp_js": 1500040230542, 
-        "localTime": 63014
+        "localTime": 63489
     }, 
     {
         "skeletons": [
@@ -5963,7 +5981,7 @@
         ], 
         "timestamp": 32043130083970, 
         "timestamp_js": 1500040230844, 
-        "localTime": 63316
+        "localTime": 63791
     }, 
     {
         "skeletons": [
@@ -5992,7 +6010,7 @@
         ], 
         "timestamp": 32043133083615, 
         "timestamp_js": 1500040231073, 
-        "localTime": 63545
+        "localTime": 64020
     }, 
     {
         "skeletons": [
@@ -6021,7 +6039,7 @@
         ], 
         "timestamp": 32043135424127, 
         "timestamp_js": 1500040231279, 
-        "localTime": 63751
+        "localTime": 64226
     }, 
     {
         "skeletons": [
@@ -6050,7 +6068,7 @@
         ], 
         "timestamp": 32043137424762, 
         "timestamp_js": 1500040231441, 
-        "localTime": 63913
+        "localTime": 64388
     }, 
     {
         "skeletons": [
@@ -6079,7 +6097,7 @@
         ], 
         "timestamp": 32043140753516, 
         "timestamp_js": 1500040231745, 
-        "localTime": 64217
+        "localTime": 64692
     }, 
     {
         "skeletons": [
@@ -6108,7 +6126,7 @@
         ], 
         "timestamp": 32043144083604, 
         "timestamp_js": 1500040232182, 
-        "localTime": 64654
+        "localTime": 65129
     }, 
     {
         "skeletons": [
@@ -6137,7 +6155,7 @@
         ], 
         "timestamp": 32043146424493, 
         "timestamp_js": 1500040232387, 
-        "localTime": 64859
+        "localTime": 65334
     }, 
     {
         "skeletons": [
@@ -6166,7 +6184,7 @@
         ], 
         "timestamp": 32043148424247, 
         "timestamp_js": 1500040232598, 
-        "localTime": 65070
+        "localTime": 65545
     }, 
     {
         "skeletons": [
@@ -6195,7 +6213,7 @@
         ], 
         "timestamp": 32043150753525, 
         "timestamp_js": 1500040232760, 
-        "localTime": 65232
+        "localTime": 65707
     }, 
     {
         "skeletons": [
@@ -6224,7 +6242,7 @@
         ], 
         "timestamp": 32043152424226, 
         "timestamp_js": 1500040233024, 
-        "localTime": 65496
+        "localTime": 65971
     }, 
     {
         "skeletons": [
@@ -6253,7 +6271,7 @@
         ], 
         "timestamp": 32043155083350, 
         "timestamp_js": 1500040233237, 
-        "localTime": 65709
+        "localTime": 66184
     }, 
     {
         "skeletons": [
@@ -6282,7 +6300,7 @@
         ], 
         "timestamp": 32043158753291, 
         "timestamp_js": 1500040233671, 
-        "localTime": 66143
+        "localTime": 66618
     }, 
     {
         "skeletons": [
@@ -6311,7 +6329,7 @@
         ], 
         "timestamp": 32043160753352, 
         "timestamp_js": 1500040233969, 
-        "localTime": 66441
+        "localTime": 66916
     }, 
     {
         "skeletons": [
@@ -6340,7 +6358,7 @@
         ], 
         "timestamp": 32043164424563, 
         "timestamp_js": 1500040234204, 
-        "localTime": 66676
+        "localTime": 67151
     }, 
     {
         "skeletons": [
@@ -6369,7 +6387,7 @@
         ], 
         "timestamp": 32043166753271, 
         "timestamp_js": 1500040234407, 
-        "localTime": 66879
+        "localTime": 67354
     }, 
     {
         "skeletons": [
@@ -6398,7 +6416,7 @@
         ], 
         "timestamp": 32043168753417, 
         "timestamp_js": 1500040234586, 
-        "localTime": 67058
+        "localTime": 67533
     }, 
     {
         "skeletons": [
@@ -6427,7 +6445,7 @@
         ], 
         "timestamp": 32043170424402, 
         "timestamp_js": 1500040234735, 
-        "localTime": 67207
+        "localTime": 67682
     }, 
     {
         "skeletons": [
@@ -6456,7 +6474,7 @@
         ], 
         "timestamp": 32043172083262, 
         "timestamp_js": 1500040234973, 
-        "localTime": 67445
+        "localTime": 67920
     }, 
     {
         "skeletons": [
@@ -6485,7 +6503,7 @@
         ], 
         "timestamp": 32043174424535, 
         "timestamp_js": 1500040235234, 
-        "localTime": 67706
+        "localTime": 68181
     }, 
     {
         "skeletons": [
@@ -6514,7 +6532,7 @@
         ], 
         "timestamp": 32043179083342, 
         "timestamp_js": 1500040235582, 
-        "localTime": 68054
+        "localTime": 68529
     }, 
     {
         "skeletons": [
@@ -6543,7 +6561,7 @@
         ], 
         "timestamp": 32043180423996, 
         "timestamp_js": 1500040235774, 
-        "localTime": 68246
+        "localTime": 68721
     }, 
     {
         "skeletons": [
@@ -6572,7 +6590,7 @@
         ], 
         "timestamp": 32043184083305, 
         "timestamp_js": 1500040236055, 
-        "localTime": 68527
+        "localTime": 69002
     }, 
     {
         "skeletons": [
@@ -6601,7 +6619,7 @@
         ], 
         "timestamp": 32043185083499, 
         "timestamp_js": 1500040236246, 
-        "localTime": 68718
+        "localTime": 69193
     }, 
     {
         "skeletons": [
@@ -6630,7 +6648,7 @@
         ], 
         "timestamp": 32043187424095, 
         "timestamp_js": 1500040236518, 
-        "localTime": 68990
+        "localTime": 69465
     }, 
     {
         "skeletons": [
@@ -6659,7 +6677,7 @@
         ], 
         "timestamp": 32043191424153, 
         "timestamp_js": 1500040236817, 
-        "localTime": 69289
+        "localTime": 69764
     }, 
     {
         "skeletons": [
@@ -6688,7 +6706,7 @@
         ], 
         "timestamp": 32043192753218, 
         "timestamp_js": 1500040237016, 
-        "localTime": 69488
+        "localTime": 69963
     }, 
     {
         "skeletons": [
@@ -6717,7 +6735,7 @@
         ], 
         "timestamp": 32043195753684, 
         "timestamp_js": 1500040237266, 
-        "localTime": 69738
+        "localTime": 70213
     }, 
     {
         "skeletons": [
@@ -6746,7 +6764,7 @@
         ], 
         "timestamp": 32043198424779, 
         "timestamp_js": 1500040237514, 
-        "localTime": 69986
+        "localTime": 70461
     }, 
     {
         "skeletons": [
@@ -6775,7 +6793,7 @@
         ], 
         "timestamp": 32043200753315, 
         "timestamp_js": 1500040237778, 
-        "localTime": 70250
+        "localTime": 70725
     }, 
     {
         "skeletons": [
@@ -6804,7 +6822,7 @@
         ], 
         "timestamp": 32043202753652, 
         "timestamp_js": 1500040237997, 
-        "localTime": 70469
+        "localTime": 70944
     }, 
     {
         "skeletons": [
@@ -6833,7 +6851,7 @@
         ], 
         "timestamp": 32043206424186, 
         "timestamp_js": 1500040238528, 
-        "localTime": 71000
+        "localTime": 71475
     }, 
     {
         "skeletons": [
@@ -6862,7 +6880,7 @@
         ], 
         "timestamp": 32043209753168, 
         "timestamp_js": 1500040238791, 
-        "localTime": 71263
+        "localTime": 71738
     }, 
     {
         "skeletons": [
@@ -6891,7 +6909,7 @@
         ], 
         "timestamp": 32043212424366, 
         "timestamp_js": 1500040239027, 
-        "localTime": 71499
+        "localTime": 71974
     }, 
     {
         "skeletons": [
@@ -6920,7 +6938,7 @@
         ], 
         "timestamp": 32043215083298, 
         "timestamp_js": 1500040239236, 
-        "localTime": 71708
+        "localTime": 72183
     }, 
     {
         "skeletons": [
@@ -6949,7 +6967,7 @@
         ], 
         "timestamp": 32043217083705, 
         "timestamp_js": 1500040239445, 
-        "localTime": 71917
+        "localTime": 72392
     }, 
     {
         "skeletons": [
@@ -6978,7 +6996,7 @@
         ], 
         "timestamp": 32043219424003, 
         "timestamp_js": 1500040239604, 
-        "localTime": 72076
+        "localTime": 72551
     }, 
     {
         "skeletons": [
@@ -7007,7 +7025,7 @@
         ], 
         "timestamp": 32043220753175, 
         "timestamp_js": 1500040239825, 
-        "localTime": 72297
+        "localTime": 72772
     }, 
     {
         "skeletons": [
@@ -7036,7 +7054,7 @@
         ], 
         "timestamp": 32043222753139, 
         "timestamp_js": 1500040240020, 
-        "localTime": 72492
+        "localTime": 72967
     }, 
     {
         "skeletons": [
@@ -7065,7 +7083,7 @@
         ], 
         "timestamp": 32043225083238, 
         "timestamp_js": 1500040240315, 
-        "localTime": 72787
+        "localTime": 73262
     }, 
     {
         "skeletons": [
@@ -7094,7 +7112,7 @@
         ], 
         "timestamp": 32043227753549, 
         "timestamp_js": 1500040240511, 
-        "localTime": 72983
+        "localTime": 73458
     }, 
     {
         "skeletons": [
@@ -7123,7 +7141,7 @@
         ], 
         "timestamp": 32043231083264, 
         "timestamp_js": 1500040240875, 
-        "localTime": 73347
+        "localTime": 73822
     }, 
     {
         "skeletons": [
@@ -7152,7 +7170,7 @@
         ], 
         "timestamp": 32043233424000, 
         "timestamp_js": 1500040241055, 
-        "localTime": 73527
+        "localTime": 74002
     }, 
     {
         "skeletons": [
@@ -7181,7 +7199,7 @@
         ], 
         "timestamp": 32043235083117, 
         "timestamp_js": 1500040241200, 
-        "localTime": 73672
+        "localTime": 74147
     }, 
     {
         "skeletons": [
@@ -7210,7 +7228,7 @@
         ], 
         "timestamp": 32043238753044, 
         "timestamp_js": 1500040241617, 
-        "localTime": 74089
+        "localTime": 74564
     }, 
     {
         "skeletons": [
@@ -7239,7 +7257,7 @@
         ], 
         "timestamp": 32043240424113, 
         "timestamp_js": 1500040241773, 
-        "localTime": 74245
+        "localTime": 74720
     }, 
     {
         "skeletons": [
@@ -7268,7 +7286,7 @@
         ], 
         "timestamp": 32043244753065, 
         "timestamp_js": 1500040242097, 
-        "localTime": 74569
+        "localTime": 75044
     }, 
     {
         "skeletons": [
@@ -7297,7 +7315,7 @@
         ], 
         "timestamp": 32043245753212, 
         "timestamp_js": 1500040242343, 
-        "localTime": 74815
+        "localTime": 75290
     }, 
     {
         "skeletons": [
@@ -7326,7 +7344,7 @@
         ], 
         "timestamp": 32043248083479, 
         "timestamp_js": 1500040242552, 
-        "localTime": 75024
+        "localTime": 75499
     }, 
     {
         "skeletons": [
@@ -7355,7 +7373,7 @@
         ], 
         "timestamp": 32043250083485, 
         "timestamp_js": 1500040242757, 
-        "localTime": 75229
+        "localTime": 75704
     }, 
     {
         "skeletons": [
@@ -7384,7 +7402,7 @@
         ], 
         "timestamp": 32043253083083, 
         "timestamp_js": 1500040243042, 
-        "localTime": 75514
+        "localTime": 75989
     }, 
     {
         "skeletons": [
@@ -7413,7 +7431,7 @@
         ], 
         "timestamp": 32043256423892, 
         "timestamp_js": 1500040243423, 
-        "localTime": 75895
+        "localTime": 76370
     }, 
     {
         "skeletons": [
@@ -7442,7 +7460,7 @@
         ], 
         "timestamp": 32043258753221, 
         "timestamp_js": 1500040243627, 
-        "localTime": 76099
+        "localTime": 76574
     }, 
     {
         "skeletons": [
@@ -7471,7 +7489,7 @@
         ], 
         "timestamp": 32043261083087, 
         "timestamp_js": 1500040243832, 
-        "localTime": 76304
+        "localTime": 76779
     }, 
     {
         "skeletons": [
@@ -7500,7 +7518,7 @@
         ], 
         "timestamp": 32043262752901, 
         "timestamp_js": 1500040243995, 
-        "localTime": 76467
+        "localTime": 76942
     }, 
     {
         "skeletons": [
@@ -7529,7 +7547,7 @@
         ], 
         "timestamp": 32043264752986, 
         "timestamp_js": 1500040244256, 
-        "localTime": 76728
+        "localTime": 77203
     }, 
     {
         "skeletons": [
@@ -7558,7 +7576,7 @@
         ], 
         "timestamp": 32043267423773, 
         "timestamp_js": 1500040244499, 
-        "localTime": 76971
+        "localTime": 77446
     }, 
     {
         "skeletons": [
@@ -7587,7 +7605,7 @@
         ], 
         "timestamp": 32043269753312, 
         "timestamp_js": 1500040244763, 
-        "localTime": 77235
+        "localTime": 77710
     }, 
     {
         "skeletons": [
@@ -7616,7 +7634,7 @@
         ], 
         "timestamp": 32043272424146, 
         "timestamp_js": 1500040244990, 
-        "localTime": 77462
+        "localTime": 77937
     }, 
     {
         "skeletons": [
@@ -7645,7 +7663,7 @@
         ], 
         "timestamp": 32043276423705, 
         "timestamp_js": 1500040245363, 
-        "localTime": 77835
+        "localTime": 78310
     }, 
     {
         "skeletons": [
@@ -7674,7 +7692,7 @@
         ], 
         "timestamp": 32043278752964, 
         "timestamp_js": 1500040245610, 
-        "localTime": 78082
+        "localTime": 78557
     }, 
     {
         "skeletons": [
@@ -7703,7 +7721,7 @@
         ], 
         "timestamp": 32043281753094, 
         "timestamp_js": 1500040245858, 
-        "localTime": 78330
+        "localTime": 78805
     }, 
     {
         "skeletons": [
@@ -7732,7 +7750,7 @@
         ], 
         "timestamp": 32043283082976, 
         "timestamp_js": 1500040245960, 
-        "localTime": 78432
+        "localTime": 78907
     }, 
     {
         "skeletons": [
@@ -7761,7 +7779,7 @@
         ], 
         "timestamp": 32043285752947, 
         "timestamp_js": 1500040246277, 
-        "localTime": 78749
+        "localTime": 79224
     }, 
     {
         "skeletons": [
@@ -7790,7 +7808,7 @@
         ], 
         "timestamp": 32043290082879, 
         "timestamp_js": 1500040246740, 
-        "localTime": 79212
+        "localTime": 79687
     }, 
     {
         "skeletons": [
@@ -7819,7 +7837,7 @@
         ], 
         "timestamp": 32043292082880, 
         "timestamp_js": 1500040246954, 
-        "localTime": 79426
+        "localTime": 79901
     }, 
     {
         "skeletons": [
@@ -7848,7 +7866,7 @@
         ], 
         "timestamp": 32043298083330, 
         "timestamp_js": 1500040247467, 
-        "localTime": 79939
+        "localTime": 80414
     }, 
     {
         "skeletons": [
@@ -7877,7 +7895,7 @@
         ], 
         "timestamp": 32043299423802, 
         "timestamp_js": 1500040247725, 
-        "localTime": 80197
+        "localTime": 80672
     }, 
     {
         "skeletons": [
@@ -7906,7 +7924,7 @@
         ], 
         "timestamp": 32043302082894, 
         "timestamp_js": 1500040247925, 
-        "localTime": 80397
+        "localTime": 80872
     }, 
     {
         "skeletons": [
@@ -7935,7 +7953,7 @@
         ], 
         "timestamp": 32043304082992, 
         "timestamp_js": 1500040248140, 
-        "localTime": 80612
+        "localTime": 81087
     }, 
     {
         "skeletons": [
@@ -7964,7 +7982,7 @@
         ], 
         "timestamp": 32043306082970, 
         "timestamp_js": 1500040248331, 
-        "localTime": 80803
+        "localTime": 81278
     }, 
     {
         "skeletons": [
@@ -7993,7 +8011,7 @@
         ], 
         "timestamp": 32043308083400, 
         "timestamp_js": 1500040248543, 
-        "localTime": 81015
+        "localTime": 81490
     }, 
     {
         "skeletons": [
@@ -8022,7 +8040,7 @@
         ], 
         "timestamp": 32043310082967, 
         "timestamp_js": 1500040248732, 
-        "localTime": 81204
+        "localTime": 81679
     }, 
     {
         "skeletons": [
@@ -8051,7 +8069,7 @@
         ], 
         "timestamp": 32043312082926, 
         "timestamp_js": 1500040248962, 
-        "localTime": 81434
+        "localTime": 81909
     }, 
     {
         "skeletons": [
@@ -8080,7 +8098,7 @@
         ], 
         "timestamp": 32043314083095, 
         "timestamp_js": 1500040249182, 
-        "localTime": 81654
+        "localTime": 82129
     }, 
     {
         "skeletons": [
@@ -8109,7 +8127,7 @@
         ], 
         "timestamp": 32043316423812, 
         "timestamp_js": 1500040249349, 
-        "localTime": 81821
+        "localTime": 82296
     }, 
     {
         "skeletons": [
@@ -8138,7 +8156,7 @@
         ], 
         "timestamp": 32043318083321, 
         "timestamp_js": 1500040249635, 
-        "localTime": 82107
+        "localTime": 82582
     }, 
     {
         "skeletons": [
@@ -8167,7 +8185,7 @@
         ], 
         "timestamp": 32043320752900, 
         "timestamp_js": 1500040249843, 
-        "localTime": 82315
+        "localTime": 82790
     }, 
     {
         "skeletons": [
@@ -8196,7 +8214,7 @@
         ], 
         "timestamp": 32043323082784, 
         "timestamp_js": 1500040250063, 
-        "localTime": 82535
+        "localTime": 83010
     }, 
     {
         "skeletons": [
@@ -8225,7 +8243,7 @@
         ], 
         "timestamp": 32043325082897, 
         "timestamp_js": 1500040250194, 
-        "localTime": 82666
+        "localTime": 83141
     }, 
     {
         "skeletons": [
@@ -8254,7 +8272,7 @@
         ], 
         "timestamp": 32043326752711, 
         "timestamp_js": 1500040250441, 
-        "localTime": 82913
+        "localTime": 83388
     }, 
     {
         "skeletons": [
@@ -8283,7 +8301,7 @@
         ], 
         "timestamp": 32043331082928, 
         "timestamp_js": 1500040250810, 
-        "localTime": 83282
+        "localTime": 83757
     }, 
     {
         "skeletons": [
@@ -8312,7 +8330,7 @@
         ], 
         "timestamp": 32043334752780, 
         "timestamp_js": 1500040251181, 
-        "localTime": 83653
+        "localTime": 84128
     }, 
     {
         "skeletons": [
@@ -8341,7 +8359,7 @@
         ], 
         "timestamp": 32043336423668, 
         "timestamp_js": 1500040251363, 
-        "localTime": 83835
+        "localTime": 84310
     }, 
     {
         "skeletons": [
@@ -8359,7 +8377,7 @@
         ], 
         "timestamp": 32043338423585, 
         "timestamp_js": 1500040251519, 
-        "localTime": 83991
+        "localTime": 84466
     }, 
     {
         "skeletons": [
@@ -8377,7 +8395,7 @@
         ], 
         "timestamp": 32043340083228, 
         "timestamp_js": 1500040251747, 
-        "localTime": 84219
+        "localTime": 84694
     }, 
     {
         "skeletons": [
@@ -8395,7 +8413,7 @@
         ], 
         "timestamp": 32043342082894, 
         "timestamp_js": 1500040252006, 
-        "localTime": 84478
+        "localTime": 84953
     }, 
     {
         "skeletons": [
@@ -8413,7 +8431,7 @@
         ], 
         "timestamp": 32043344752613, 
         "timestamp_js": 1500040252213, 
-        "localTime": 84685
+        "localTime": 85160
     }, 
     {
         "skeletons": [
@@ -8431,6 +8449,6 @@
         ], 
         "timestamp": 32043348423655, 
         "timestamp_js": 1500040252586, 
-        "localTime": 85058
+        "localTime": 85533
     }
 ]
