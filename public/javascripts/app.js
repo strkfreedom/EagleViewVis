@@ -1,4 +1,4 @@
-var appConfig = { showFrameBox: false,
+var appConfig = { showFrameBox: true,
                   originalFPS: 25, 
                   targetFPS: 4, 
                   sightAngle: 90, 
@@ -110,6 +110,9 @@ function init(data) {
     console.log('frames', frames);
 
     onFormInputUpdated(function(){
+      for(var i=0; i<temporaryIos.length; i++){
+        stage.addChild(temporaryIos[i]);
+      }
       returnObject = computeData(data, appConfig, temporaryIos);
       frames = returnObject.frames;
     });
